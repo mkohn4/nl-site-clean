@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw== -->
+<html lang="en" class="js-focus-visible" data-js-focus-visible=""><head>
+  <link rel="stylesheet" href="./styles.css"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=1200">
+
+    <link rel="icon" href="https://us1.spiff.com/icon.png" type="image/png">
+    <link rel="shortcut icon" href="https://us1.spiff.com/favicon.ico" type="image/x-icon">
+    
+
+    <!-- Style Salesforce Digital Engagement suport chat/form help button -->
+    <style type="text/css">
+      .embeddedServiceHelpButton .helpButton {
+        display: none;
+      }
+      .embeddedServiceHelpButton .helpButton .uiButton {
+        color: #545cff !important;
+        background-color: #ffffff !important;
+        font-family: "Hellix", sans-serif !important;
+      }
+      .embeddedServiceHelpButton .helpButton .uiButton:focus,
+      .embeddedServiceHelpButton .helpButton .uiButton:hover {
+        background-color: #edeefe !important;
+      }
+      .embeddedServiceHelpButton .helpButton .embeddedServiceIcon {
+        display: block !important;
+      }
+      .embeddedServiceSidebarMinimizedDefaultUI #chatButtonAssistiveText {
+        display: inline-block !important;
+      }
+      .embeddedServiceSidebarMinimizedDefaultUI .content {
+        display: none !important;
+      }
+      .chatHeaderBranding {
+        background: -webkit-gradient(linear, left top, right top, color-stop(-2.3%, #FC9358), to(#FCBA58)) !important;
+        background: -o-linear-gradient(left, #FC9358 -2.3%, #FCBA58 100%) !important;
+        background: linear-gradient(90deg, #FC9358 -2.3%, #FCBA58 100%) !important;
+      }
+      .embeddedServiceSidebarMinimizedDefaultUI.helpButton {
+        background: -webkit-gradient(linear, left top, right top, color-stop(-2.3%, #FC9358), to(#FCBA58)) !important;
+        background: -o-linear-gradient(left, #FC9358 -2.3%, #FCBA58 100%) !important;
+        background: linear-gradient(90deg, #FC9358 -2.3%, #FCBA58 100%) !important;
+        margin-bottom: 16px;
+        border-radius: 8px;
+      }
+      .sidebarHeader .minimizeButton, .sidebarHeader .closeButton {
+        height: 20px !important;
+        width: 20px !important;
+        min-height: 20px !important;
+        min-width: 20px !important;
+        margin: 4px;
+        padding: 0;
+      }
+    </style>
+
+    <!-- Hide Cookie banner until it has been properly styled -->
+    <style>
+      .osano-cm-window {
+        display: none;
+      }
+    </style>
+
+    <style>
+      @-webkit-keyframes pulse {
+        0%,
+        10% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+        }
+        5% {
+          -webkit-transform: scale(0.9);
+                  transform: scale(0.9);
+        }
+      }
+      @keyframes pulse {
+        0%,
+        10% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+        }
+        5% {
+          -webkit-transform: scale(0.9);
+                  transform: scale(0.9);
+        }
+      }
+      @-webkit-keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @-webkit-keyframes popIn {
+        0%,
+        100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+        }
+        50% {
+          -webkit-transform: scale(1.025);
+                  transform: scale(1.025);
+        }
+      }
+      @keyframes popIn {
+        0%,
+        100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+        }
+        50% {
+          -webkit-transform: scale(1.025);
+                  transform: scale(1.025);
+        }
+      }
+
+      
+      #default-error-message {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        display:none;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        font-family: verdana, Tahoma ,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+        height: 100vh;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        width: 100vw;
+      }
+      #default-error-message svg {
+        height: 200px;
+        width: 200px;
+      }
+      #default-error-message p {
+       margin: 8px 0px;
+      }
+      #default-error-message button {
+        background: #545cff;
+        border-radius: 3px;
+        border: none;
+        color: white;
+        margin-top: 8px;
+        padding: 10px 20px;
+        -webkit-transition: background-color 0.3s ease-in-out;
+        -o-transition: background-color 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+      }
+      #default-error-message button:hover {
+       background: #3f47e9;
+      }
+      #default-error-loading-message {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        height: 100vh;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        width: 100vw;
+      }
+      #default-error-loading-message svg {
+        -webkit-animation: 0.5s linear 1 both fadeIn, 3s 3s ease-in-out infinite both pulse;
+                animation: 0.5s linear 1 both fadeIn, 3s 3s ease-in-out infinite both pulse;
+        height: 40px;
+        width: 40px;
+      }
+    </style>
+
+    <!-- Cookie management software & notification banner -->
+    
+
+    <title>January 2025 | Commissions | Spiff</title>
+    
+    
+  <style></style><meta name="react-scroll-to-bottom:version" content="4.2.0"><style data-react-tooltip="true">.__react_component_tooltip {
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 13px;
+  left: -999em;
+  opacity: 0;
+  padding: 8px 21px;
+  position: fixed;
+  pointer-events: none;
+  transition: opacity 0.3s ease-out;
+  top: -999em;
+  visibility: hidden;
+  z-index: 999;
+}
+.__react_component_tooltip.allow_hover, .__react_component_tooltip.allow_click {
+  pointer-events: auto;
+}
+.__react_component_tooltip::before, .__react_component_tooltip::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.__react_component_tooltip.show {
+  opacity: 0.9;
+  margin-top: 0;
+  margin-left: 0;
+  visibility: visible;
+}
+.__react_component_tooltip.place-top::before {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  bottom: -8px;
+  left: 50%;
+  margin-left: -10px;
+}
+.__react_component_tooltip.place-bottom::before {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  top: -8px;
+  left: 50%;
+  margin-left: -10px;
+}
+.__react_component_tooltip.place-left::before {
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  right: -8px;
+  top: 50%;
+  margin-top: -5px;
+}
+.__react_component_tooltip.place-right::before {
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  left: -8px;
+  top: 50%;
+  margin-top: -5px;
+}
+.__react_component_tooltip .multi-line {
+  display: block;
+  padding: 2px 0;
+  text-align: center;
+}</style><style id="inert-style">
+[inert] {
+	pointer-events: none;
+	cursor: default;
+}
+
+[inert], [inert] * {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+</style><style data-emotion="css" data-s=""></style><style data-jss="" data-meta="SearchInput, Unthemed">
+.SearchInput-root-0-2-1 {
+  width: fit-content;
+  display: inline-block;
+  --offset: 4px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 9999px;
+  --expanded-width: 300px;
+  --collapsed-width: 48px;
+  --expanded-icon-bg: #545cff;
+  --collapsed-icon-bg: #d3d8db;
+}
+.SearchInput-root-0-2-1 .SearchInput-input-0-2-2:placeholder-shown ~ .SearchInput-clear-0-2-4 {
+  cursor: text;
+  opacity: 0;
+}
+.SearchInput-root-0-2-1[data-expanded=true] .SearchInput-input-0-2-2 {
+  width: var(--expanded-width);
+  opacity: 1;
+  padding-left: calc(var(--collapsed-width) / 2);
+  padding-right: var(--collapsed-width);
+}
+.SearchInput-root-0-2-1[data-expanded=true] .SearchInput-clear-0-2-4 {
+  display: block;
+}
+.SearchInput-root-0-2-1[data-expanded=true]:focus-within .SearchInput-icon-0-2-3 {
+  background-color: var(--expanded-icon-bg);
+}
+.SearchInput-root-0-2-1[data-expanded=false] .SearchInput-input-0-2-2 {
+  width: var(--collapsed-width);
+  opacity: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.SearchInput-root-0-2-1[data-expanded=false] .SearchInput-clear-0-2-4 {
+  display: none;
+}
+.SearchInput-input-0-2-2 {
+  width: var(--collapsed-width);
+  border: 1px solid #e4e8eb;
+  height: var(--collapsed-width);
+  font-size: 16px;
+  max-width: 100%;
+  transition: 0.35s all ease-out;
+  border-radius: 9999px;
+}
+.SearchInput-icon-0-2-3 {
+  top: var(--offset);
+  right: var(--offset);
+  width: calc(var(--collapsed-width) - 2 * var(--offset));
+  cursor: pointer;
+  height: calc(var(--collapsed-width) - 2 * var(--offset));
+  position: absolute;
+  border-radius: 9999px;
+  background-color: var(--collapsed-icon-bg);
+}
+.SearchInput-icon-0-2-3 svg {
+  top: 50%;
+  left: 50%;
+  color: #ffffff;
+  width: calc(var(--collapsed-width) / 2 - var(--offset) * 1.5);
+  height: calc(var(--collapsed-width) / 2 - var(--offset) * 1.5);
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.SearchInput-clear-0-2-4 {
+  top: 50%;
+  right: calc(var(--collapsed-width) + var(--offset) * 2);
+  cursor: pointer;
+  opacity: 1;
+  position: absolute;
+  transform: translateY(-50%);
+  transition: opacity 50ms linear;
+}
+.SearchInput-clear-0-2-4 svg {
+  top: 50%;
+  left: 50%;
+  width: calc(var(--collapsed-width) / 4);
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.SearchInput-small-0-2-5 {
+  --offset: 2px;
+  --collapsed-width: 32px;
+}
+.SearchInput-small-0-2-5 .SearchInput-input-0-2-2 {
+  font-size: 13px;
+}
+.SearchInput-medium-0-2-6 {
+  --offset: 2px;
+  --collapsed-width: 36px;
+}
+.SearchInput-medium-0-2-6 .SearchInput-input-0-2-2 {
+  font-size: 13px;
+}
+.SearchInput-dark-0-2-9 {
+  --expanded-icon-bg: #172024;
+  --collapsed-icon-bg: #172024;
+}
+.SearchInput-dark-0-2-9 .SearchInput-input-0-2-2 {
+  color: #d3d8db;
+  border: none;
+  font-weight: 500;
+  background-color: #4c4c56;
+}
+.SearchInput-dark-0-2-9 .SearchInput-icon-0-2-3 svg {
+  color: #d3d8db;
+}
+.SearchInput-dark-0-2-9 .SearchInput-icon-0-2-3:hover svg {
+  color: #f7f9fa;
+}
+.SearchInput-dark-0-2-9 .SearchInput-input-0-2-2::placeholder {
+  color: #8b96a6;
+}
+.SearchInput-naked-0-2-10 {
+  --expanded-icon-bg: transparent;
+  --collapsed-icon-bg: transparent;
+}
+.SearchInput-naked-0-2-10 .SearchInput-icon-0-2-3 svg, .SearchInput-naked-0-2-10[data-expanded=true]:focus-within .SearchInput-icon-0-2-3 svg {
+  color: #878f94;
+}
+.SearchInput-withClear-0-2-11[data-expanded=true] .SearchInput-input-0-2-2 {
+  padding-right: calc(var(--collapsed-width) * 1.5);
+}
+.SearchInput-hideIcon-0-2-12 .SearchInput-input-0-2-2 {
+  width: 100%;
+}
+.SearchInput-hideIcon-0-2-12 .SearchInput-icon-0-2-3 {
+  width: 0;
+}
+.SearchInput-hideIcon-0-2-12 .SearchInput-icon-0-2-3 svg {
+  display: none;
+}
+.SearchInput-withLeftIcon-0-2-13[data-expanded=true] .SearchInput-input-0-2-2 {
+  padding-left: var(--collapsed-width);
+  padding-right: var(--collapsed-width);
+}
+.SearchInput-withLeftIcon-0-2-13 .SearchInput-icon-0-2-3 {
+  left: var(--offset);
+  right: auto;
+}
+.SearchInput-withLeftIcon-0-2-13 .SearchInput-clear-0-2-4 {
+  right: calc(var(--collapsed-width) / 2);
+}
+.SearchInput-withLeftIcon-0-2-13.SearchInput-withClear-0-2-11[data-expanded=true] .SearchInput-input-0-2-2 {
+  padding-right: var(--collapsed-width);
+}
+.SearchInput-square-0-2-14 {
+  border-radius: 4px;
+}
+.SearchInput-square-0-2-14 .SearchInput-input-0-2-2 {
+  border-radius: 4px;
+}
+.SearchInput-square-0-2-14[data-expanded=false] .SearchInput-input-0-2-2 {
+  border-radius: 50%;
+}
+</style></head>
+  <body>
+    <div id="skip">
+      <a href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==#skip-to">Skip To Content</a>
+    </div>
+    <div id="root"><div class="in-app"><div class="standard-layout"><div class="main-header-top-bar"><div id="progress-bar-overlay"></div><div class="top-stripe" id="top-stripe"></div><div class="top-bar-content" data-cy="top-bar-content"><a class="top-bar-logo" data-cy="top-bar-logo" href="./index.html"><div class="_customLogo_1kthf_1"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 431.2 701.3" class=" nav logo"><path d="M426.3 357.6 216.4 466.2V235l209.9 122.6z" style="fill: rgb(177, 121, 244);"></path><path d="m6.4 357.6 209.9 108.6V235L6.4 357.6z" style="fill: rgb(157, 90, 224);"></path><path d="m216.4 466.2 209.9-108.6v217.3L216.4 697.5V466.2z" style="fill: rgb(11, 230, 199);"></path><path d="M426.3 574.9 216.4 466.2v231.2l209.9-122.5z" style="fill: rgb(9, 220, 190);"></path><path d="M8.1 583.1c-4.4 2.5-4.2 8.7.3 10.9l208 103.4V466.2L8.1 583.1z" style="fill: rgb(72, 198, 181);"></path><path d="M416.6 118.1c4.3-2.5 4.1-8.6-.3-10.8L216.4 3.8V235l200.2-116.9z" style="fill: rgb(255, 139, 115);"></path><path d="M216.4 235 6.4 126.4v231.2l210-122.6z" style="fill: rgb(255, 197, 130);"></path><path d="M6.4 126.4 216.3 235V3.8L6.4 126.4z" style="fill: rgb(255, 168, 119);"></path></svg></div><span class="_visuallyHidden_183jt_1">Spiff</span></a><nav class="top-bar-nav" data-cy="top-bar-nav" data-testid="top-bar-nav"><ul><li class="commissions main-nav-link" data-cy="top-nav-commisions"><a href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==" aria-current="page" class="active">Commissions</a></li><li class="main-nav-link" data-cy="top-nav-teams"><a href="https://us1.spiff.com/teams">Teams</a></li><li class="main-nav-link" data-cy="top-nav-plans"><a href="https://us1.spiff.com/plans/table">Plans</a></li><li class="main-nav-link" data-cy="top-nav-quotas"><a href="https://us1.spiff.com/quotas">Quotas</a></li><li class="main-nav-link" data-cy="top-nav-contracts"><a href="https://us1.spiff.com/documents">Documents</a></li><li class="data-sources main-nav-link"><a data-cy="top-nav-data-sources" href="https://us1.spiff.com/data_sources/Q29ubmVjdG9yLTgxOTE=/accounts/TWFwcGluZy01MTY5OQ==">Data Sources</a></li><span class="_gradient-nav_1emb9_23"><button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-0" data-state="closed" aria-label="navigation-submenu" class="_submenu-trigger_1emb9_30" data-cy="popover-trigger"><li><span class="nav-text ">Reporting</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="_icon_aigk5_23 _dropdown-arrow_1emb9_43 _medium_aigk5_38" color="#d3d8db"><polygon fill-rule="evenodd" points="19.293 7.293 20.707 8.707 12 17.414 3.293 8.707 4.707 7.293 12 14.586"></polygon></svg></li></button></span><span class="_gradient-nav_1emb9_23"><button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-1" data-state="closed" aria-label="navigation-submenu" class="_submenu-trigger_1emb9_30" data-cy="popover-trigger"><li><span class="nav-text ">Admin</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="_icon_aigk5_23 _dropdown-arrow_1emb9_43 _medium_aigk5_38" color="#d3d8db"><polygon fill-rule="evenodd" points="19.293 7.293 20.707 8.707 12 17.414 3.293 8.707 4.707 7.293 12 14.586"></polygon></svg></li></button></span></ul></nav><div class="react-select-container focus-within:outline-rounded switch-user-selector" data-cy="react-select-container" data-selected="false"><div class="react-select css-b62m3t-container"><span id="react-select-2-live-region" class="css-7pg0cj-a11yText"></span><span aria-live="polite" aria-atomic="false" aria-relevant="additions text" role="log" class="css-7pg0cj-a11yText"></span><div class="react-select__control css-13cymwt-control"><div class="react-select__value-container react-select__value-container--has-value css-hlgwow"><div class="react-select__single-value css-1dimb5e-singleValue">Spiff Demo 7.0 - Dan Vasilievsky</div><div class="react-select__input-container css-19bb58m" data-value=""><input class="react-select__input" autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-2-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" role="combobox" value="" style="color: inherit; background: 0px center; opacity: 1; width: 100%; grid-area: 1 / 2; font: inherit; min-width: 2px; border: 0px; margin: 0px; outline: 0px; padding: 0px;"></div></div><div class="react-select__indicators css-1wy0on6"><span class="react-select__indicator-separator css-1u9des2-indicatorSeparator"></span><div class="react-select__indicator react-select__dropdown-indicator css-1xc3v61-indicatorContainer" aria-hidden="true"><svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-8mmkcg"><path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"></path></svg></div></div></div></div></div><span class="_tip-trigger_1tx91_23 tip-trigger designer-tooltip" data-cy="designer-tip" data-for="designer-tip" data-tip="true" currentitem="false"><a class="designer-link-container focus-visible:outline-rounded" data-cy="designer-link-container" href="https://us1.spiff.com/designer"><span class="link-content" data-cy="link-designer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="_icon_aigk5_23 _small_aigk5_34" color="#424b4f"><path fill-rule="evenodd" d="M4.10514201,11.8070619 L2.74013818,2.2520351 L22.236068,12 L2.74013818,21.7479649 L4.10514201,12.1929381 L4.87689437,12 L4.10514201,11.8070619 Z M5.25986182,5.7479649 L5.89485799,10.1929381 L13.1231056,12 L5.89485799,13.8070619 L5.25986182,18.2520351 L17.763932,12 L5.25986182,5.7479649 Z"></path></svg><span class="link-label">Designer</span></span></a></span><div class="icons-right-container icons-right-container-gap"><span data-state="closed" class="_tip_trigger_1n3oc_50" data-cy="tooltip-trigger"><button aria-label="Salesforce Help" class="help-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="_icon_aigk5_23 _medium_aigk5_38" color="#424b4f"><path fill-rule="evenodd" d="M12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 Z M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z M12.0003283,16.9983464 C11.4478622,16.9983464 11,16.5506311 11,15.9983464 C11,15.4460616 11.4478622,14.9983464 12.0003283,14.9983464 C12.5527943,14.9983464 13.0006565,15.4460616 13.0006565,15.9983464 C13.0006565,16.5506311 12.5527943,16.9983464 12.0003283,16.9983464 Z M13,14 L11,14 C11,12.2983529 11.6245803,11.5696759 13.0527864,10.8555728 C13.8745803,10.4446759 14,10.2983529 14,9.5 C14,8.556407 13.2771608,8 12,8 C10.8954305,8 10,8.8954305 10,10 L8,10 C8,7.790861 9.790861,6 12,6 C14.2843464,6 16,7.32062807 16,9.5 C16,11.2016471 15.3754197,11.9303241 13.9472136,12.6444272 C13.1254197,13.0553241 13,13.2016471 13,14 Z"></path></svg></button></span><span class="_tip-trigger_1tx91_23 tip-trigger" data-tip="true" currentitem="false"><button data-cy="icon-button" type="button" id="radix-0" aria-haspopup="menu" aria-expanded="false" data-state="closed" aria-label="Global Sync Actions" class="_button_la2j5_23 _iconButton_la2j5_37 _medium_la2j5_113 _spiffLight_la2j5_315 _neutral_la2j5_278 _tertiary_la2j5_231 _topBarIcon_j5n9p_37"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="_icon_aigk5_23 _icon_la2j5_37 _medium_aigk5_38" color="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M17.8069373,7 C16.4464601,5.07869636 14.3936238,4 12,4 C7.581722,4 4,7.581722 4,12 L2,12 C2,6.4771525 6.4771525,2 12,2 C14.8042336,2 17.274893,3.18251178 19,5.27034886 L19,2 L21,2 L21,9 L14,9 L14,7 L17.8069373,7 Z M6.19306266,17 C7.55353989,18.9213036 9.60637619,20 12,20 C16.418278,20 20,16.418278 20,12 L22,12 C22,17.5228475 17.5228475,22 12,22 C9.19576641,22 6.72510698,20.8174882 5,18.7296511 L5,22 L3,22 L3,15 L10,15 L10,17 L6.19306266,17 Z"></path></svg><span class="_warningIndicator_j5n9p_58">!</span></button><div class="__react_component_tooltip teacf4163-d0e6-4fa6-bf6f-5035c3ade5dc place-top type-dark allow_hover" data-id="tooltip"><style>
+  	.teacf4163-d0e6-4fa6-bf6f-5035c3ade5dc {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+  	}
+
+  	.teacf4163-d0e6-4fa6-bf6f-5035c3ade5dc.place-top {
+        margin-top: -10px;
+    }
+    .teacf4163-d0e6-4fa6-bf6f-5035c3ade5dc.place-top::before {
+        border-top: 8px solid transparent;
+    }
+    .teacf4163-d0e6-4fa6-bf6f-5035c3ade5dc.place-top::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-top-color: #222;
+        border-top-style: solid;
+        border-top-width: 6px;
+    }
+
+    .teacf4163-d0e6-4fa6-bf6f-5035c3ade5dc.place-bottom {
+        margin-top: 10px;
+    }
+    .teacf4163-d0e6-4fa6-bf6f-5035c3ade5dc.place-bottom::before {
+        border-bottom: 8px solid transparent;
+    }
+    .teacf4163-d0e6-4fa6-bf6f-5035c3ade5dc.place-bottom::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-bottom-color: #222;
+        border-bottom-style: solid;
+        border-bottom-width: 6px;
+    }
+
+    .teacf4163-d0e6-4fa6-bf6f-5035c3ade5dc.place-left {
+        margin-left: -10px;
+    }
+    .teacf4163-d0e6-4fa6-bf6f-5035c3ade5dc.place-left::before {
+        border-left: 8px solid transparent;
+    }
+    .teacf4163-d0e6-4fa6-bf6f-5035c3ade5dc.place-left::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-left-color: #222;
+        border-left-style: solid;
+        border-left-width: 6px;
+    }
+
+    .teacf4163-d0e6-4fa6-bf6f-5035c3ade5dc.place-right {
+        margin-left: 10px;
+    }
+    .teacf4163-d0e6-4fa6-bf6f-5035c3ade5dc.place-right::before {
+        border-right: 8px solid transparent;
+    }
+    .teacf4163-d0e6-4fa6-bf6f-5035c3ade5dc.place-right::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-right-color: #222;
+        border-right-style: solid;
+        border-right-width: 6px;
+    }
+  </style><span data-cy="undefined-content">Global Sync Actions</span></div></span><span class="_tip-trigger_1tx91_23 tip-trigger" data-cy="notification-center-tip" data-for="notification-center-tip" data-tip="true" currentitem="false"><a class="_bellIconLink_15ie7_23" href="https://us1.spiff.com/notifications"><div class="_bellIconWrapper_15ie7_45"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="_icon_aigk5_23 _large_aigk5_42" color="#424b4f"><path fill-rule="evenodd" d="M10.1353075,2.27592318 C10.2402118,2.0052531 10.405725,1.75363521 10.6305147,1.54243008 C11.4002733,0.819189975 12.5997267,0.819189975 13.3694853,1.54243008 C13.5947695,1.75409979 13.7605161,2.00636024 13.8653839,2.27770959 C16.7616088,3.1234978 19,5.9408248 19,10 C19,12.6246407 19.5316915,14.1023939 20.5153799,15.1769385 C20.7591805,15.4432571 21.6159553,16.2145106 21.7120353,16.3119441 L22,16.6039656 L22,20.0140878 L15.8743256,20.0140878 C15.6241439,20.9988638 15.0074832,21.861375 14.0878016,22.4226016 C12.8058555,23.2048965 11.1941445,23.2048965 9.91219841,22.4226016 C8.87009269,21.7866669 8.29383594,21.076125 8.08797645,20.0140878 L2,20.0140878 L2,16.6039656 L2.2879647,16.3119441 C2.39205094,16.2070827 3.24384208,15.442761 3.48595854,15.1793313 C4.46898326,14.1097716 5,12.6338939 5,10 C5,5.92919283 7.23535296,3.11802713 10.1353075,2.27592318 Z M10.1786171,20.0140878 C10.3199018,20.276911 10.5607105,20.4753661 10.9540156,20.7153766 C11.596268,21.1073049 12.403732,21.1073049 13.0459844,20.7153766 C13.3433933,20.5338858 13.5757865,20.2937382 13.7367218,20.0140878 L10.1786171,20.0140878 Z M20,17.4519264 C19.701613,17.1774463 19.2506046,16.7572744 19.0401756,16.5274096 C17.7059972,15.0700027 17,13.1077943 17,10 C17,6.23128941 14.6597092,4.01238167 12,4.01238167 C9.33276935,4.01238167 7,6.21989471 7,10 C7,13.1178011 6.29422173,15.0794011 4.95848591,16.5327208 C4.74843403,16.7612633 4.29607181,17.181102 4,17.45237 L4,18.0140878 L20,18.0140878 L20,17.4519264 Z"></path></svg></div></a><div class="__react_component_tooltip t96df079d-e092-4b2e-85ac-1d55d38f6c86 place-top type-dark allow_hover" id="notification-center-tip" data-id="tooltip"><style>
+  	.t96df079d-e092-4b2e-85ac-1d55d38f6c86 {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+  	}
+
+  	.t96df079d-e092-4b2e-85ac-1d55d38f6c86.place-top {
+        margin-top: -10px;
+    }
+    .t96df079d-e092-4b2e-85ac-1d55d38f6c86.place-top::before {
+        border-top: 8px solid transparent;
+    }
+    .t96df079d-e092-4b2e-85ac-1d55d38f6c86.place-top::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-top-color: #222;
+        border-top-style: solid;
+        border-top-width: 6px;
+    }
+
+    .t96df079d-e092-4b2e-85ac-1d55d38f6c86.place-bottom {
+        margin-top: 10px;
+    }
+    .t96df079d-e092-4b2e-85ac-1d55d38f6c86.place-bottom::before {
+        border-bottom: 8px solid transparent;
+    }
+    .t96df079d-e092-4b2e-85ac-1d55d38f6c86.place-bottom::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-bottom-color: #222;
+        border-bottom-style: solid;
+        border-bottom-width: 6px;
+    }
+
+    .t96df079d-e092-4b2e-85ac-1d55d38f6c86.place-left {
+        margin-left: -10px;
+    }
+    .t96df079d-e092-4b2e-85ac-1d55d38f6c86.place-left::before {
+        border-left: 8px solid transparent;
+    }
+    .t96df079d-e092-4b2e-85ac-1d55d38f6c86.place-left::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-left-color: #222;
+        border-left-style: solid;
+        border-left-width: 6px;
+    }
+
+    .t96df079d-e092-4b2e-85ac-1d55d38f6c86.place-right {
+        margin-left: 10px;
+    }
+    .t96df079d-e092-4b2e-85ac-1d55d38f6c86.place-right::before {
+        border-right: 8px solid transparent;
+    }
+    .t96df079d-e092-4b2e-85ac-1d55d38f6c86.place-right::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-right-color: #222;
+        border-right-style: solid;
+        border-right-width: 6px;
+    }
+  </style><span data-cy="notification-center-tip-content">Notifications</span></div></span><span class="_tip-trigger_1tx91_23 tip-trigger" data-cy="platform-search-tip" data-for="platform-search-tip" data-tip="true" currentitem="false"><button class="main" data-cy="global-search-button" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="_icon_aigk5_23 _large_aigk5_42" color="#424b4f"><path fill-rule="evenodd" d="M16.3198574,14.9056439 L21.7071068,20.2928932 L20.2928932,21.7071068 L14.9056439,16.3198574 C13.5509601,17.3729184 11.8487115,18 10,18 C5.581722,18 2,14.418278 2,10 C2,5.581722 5.581722,2 10,2 C14.418278,2 18,5.581722 18,10 C18,11.8487115 17.3729184,13.5509601 16.3198574,14.9056439 Z M10,16 C13.3137085,16 16,13.3137085 16,10 C16,6.6862915 13.3137085,4 10,4 C6.6862915,4 4,6.6862915 4,10 C4,13.3137085 6.6862915,16 10,16 Z"></path></svg><span class="_visuallyHidden_183jt_1">Global Search</span></button><div class="__react_component_tooltip t787edfc9-a347-450e-a337-c9565774f9ac place-top type-dark allow_hover" id="platform-search-tip" data-id="tooltip"><style>
+  	.t787edfc9-a347-450e-a337-c9565774f9ac {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+  	}
+
+  	.t787edfc9-a347-450e-a337-c9565774f9ac.place-top {
+        margin-top: -10px;
+    }
+    .t787edfc9-a347-450e-a337-c9565774f9ac.place-top::before {
+        border-top: 8px solid transparent;
+    }
+    .t787edfc9-a347-450e-a337-c9565774f9ac.place-top::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-top-color: #222;
+        border-top-style: solid;
+        border-top-width: 6px;
+    }
+
+    .t787edfc9-a347-450e-a337-c9565774f9ac.place-bottom {
+        margin-top: 10px;
+    }
+    .t787edfc9-a347-450e-a337-c9565774f9ac.place-bottom::before {
+        border-bottom: 8px solid transparent;
+    }
+    .t787edfc9-a347-450e-a337-c9565774f9ac.place-bottom::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-bottom-color: #222;
+        border-bottom-style: solid;
+        border-bottom-width: 6px;
+    }
+
+    .t787edfc9-a347-450e-a337-c9565774f9ac.place-left {
+        margin-left: -10px;
+    }
+    .t787edfc9-a347-450e-a337-c9565774f9ac.place-left::before {
+        border-left: 8px solid transparent;
+    }
+    .t787edfc9-a347-450e-a337-c9565774f9ac.place-left::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-left-color: #222;
+        border-left-style: solid;
+        border-left-width: 6px;
+    }
+
+    .t787edfc9-a347-450e-a337-c9565774f9ac.place-right {
+        margin-left: 10px;
+    }
+    .t787edfc9-a347-450e-a337-c9565774f9ac.place-right::before {
+        border-right: 8px solid transparent;
+    }
+    .t787edfc9-a347-450e-a337-c9565774f9ac.place-right::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-right-color: #222;
+        border-right-style: solid;
+        border-right-width: 6px;
+    }
+  </style><span data-cy="platform-search-tip-content">Global Search</span></div></span><button class="nav-avatar" data-cy="nav-avatar" type="button"><div class="_avatar_fe5p1_23 avatar" data-cy="avatar" style="background-image: linear-gradient(rgb(75, 85, 99), rgb(75, 85, 99)); height: 36px; width: 36px; min-width: 36px;"><div class="_borderSpacer_fe5p1_33" style="background: white; padding: 1px; height: 34px; width: 34px; min-width: 34px;"><div class="_content_fe5p1_40" data-cy="avatar-content" style="background-color: rgba(255, 130, 104, 0.8); background-image: url(&quot;undefined&quot;); font-size: 12px; height: 32px; width: 32px; min-width: 32px;">MK</div></div></div><span class="_visuallyHidden_183jt_1">My profile</span></button></div></div></div><div class="company"><div class="content" id="content"><div id="skip-to"></div><div class="statement-periods-show" data-cy="statement-periods-show"><div class="main-header-secondary-bar commissions" data-cy="statement-header"><div class="layout-container"><nav class="secondary-nav" data-cy="statement-navigation"><div class="left"><p class="_greeting_r0cqr_23">Welcome, Max Kohn!</p></div><div class="center"><span class="title small-header">Commission Period</span><span class="period-nav"><span class="statement-period-nav" data-cy="statement-period-nav"><button class="_iconButton_1u30k_23 _medium_1u30k_31 prev focus-visible:outline-rounded" data-cy="icon-button" type="button"><span class="_visuallyHidden_183jt_1">Previous</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="_icon_aigk5_23 _icon_1u30k_23 _medium_aigk5_38" color="currentColor"><path fill-rule="evenodd" d="M12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 Z M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z M13.7071068,15.2928932 L12.2928932,16.7071068 L7.58578644,12 L12.2928932,7.29289322 L13.7071068,8.70710678 L10.4142136,12 L13.7071068,15.2928932 Z"></path></svg></button><button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-2" data-state="closed" aria-label="dropdown-menu" class="basic-dropdown-trigger" data-cy="popover-trigger"><span data-testid="basic-dropdown-label">January 2025</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="_icon_aigk5_23 basic-dropdown-icon _small_aigk5_34" color="#172024"><polygon fill-rule="evenodd" points="19.293 7.293 20.707 8.707 12 17.414 3.293 8.707 4.707 7.293 12 14.586"></polygon></svg></button></span></span></div><div class="right"><div class="_statementFilterTags_76dlu_1" data-cy="statement-filter-tags"><div class="react-select-container focus-within:outline-rounded statement-filter-tag _statementFilterTag_76dlu_1" data-cy="react-select-container" data-selected="true"><div class="react-select css-b62m3t-container"><span id="react-select-4-live-region" class="css-7pg0cj-a11yText"></span><span aria-live="polite" aria-atomic="false" aria-relevant="additions text" role="log" class="css-7pg0cj-a11yText"></span><div class="react-select__control css-13cymwt-control"><div class="react-select__value-container react-select__value-container--has-value css-hlgwow"><div class="react-select__single-value css-1dimb5e-singleValue">All Teams</div><div class="react-select__input-container css-19bb58m" data-value=""><input class="react-select__input" autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-4-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" role="combobox" value="" style="color: inherit; background: 0px center; opacity: 1; width: 100%; grid-area: 1 / 2; font: inherit; min-width: 2px; border: 0px; margin: 0px; outline: 0px; padding: 0px;"></div></div><div class="react-select__indicators css-1wy0on6"><span class="react-select__indicator-separator css-1u9des2-indicatorSeparator"></span><div class="react-select__indicator react-select__dropdown-indicator css-1xc3v61-indicatorContainer" aria-hidden="true"><svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-8mmkcg"><path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"></path></svg></div></div></div></div></div><div class="react-select-container focus-within:outline-rounded statement-filter-tag _statementFilterTag_76dlu_1" data-cy="react-select-container" data-selected="true"><div class="react-select css-b62m3t-container"><span id="react-select-3-live-region" class="css-7pg0cj-a11yText"></span><span aria-live="polite" aria-atomic="false" aria-relevant="additions text" role="log" class="css-7pg0cj-a11yText"></span><div class="react-select__control css-13cymwt-control"><div class="react-select__value-container react-select__value-container--has-value css-hlgwow"><div class="react-select__single-value css-1dimb5e-singleValue">All Plans</div><div class="react-select__input-container css-19bb58m" data-value=""><input class="react-select__input" autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-3-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" role="combobox" value="" style="color: inherit; background: 0px center; opacity: 1; width: 100%; grid-area: 1 / 2; font: inherit; min-width: 2px; border: 0px; margin: 0px; outline: 0px; padding: 0px;"></div></div><div class="react-select__indicators css-1wy0on6"><span class="react-select__indicator-separator css-1u9des2-indicatorSeparator"></span><div class="react-select__indicator react-select__dropdown-indicator css-1xc3v61-indicatorContainer" aria-hidden="true"><svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-8mmkcg"><path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"></path></svg></div></div></div></div></div></div></div></nav></div></div><div class="_statementContentWrapper_2x2tg_23" id="statement-content-wrapper"><div class="summary _summary_7vviv_23" data-cy="summary"><div class="layout-container _layoutContainer_7vviv_37" data-cy="plan-metric-layout-container"><div class="_metricCard_1mvl1_23" data-cy="metric-card"><p class="_title_46oz0_23">Total Commissions</p><div class="_section_460el_1"><p class="_label_pcd46_23" data-cy="metric-subtitle-label">Total Commissions</p><div class="summary-item _summaryItem_1njg0_23" data-cy="summary-item"><div class="value-row"><span class="_currencyCode_1njg0_40">$</span><span class="_value_1njg0_31">40,318.36</span><div class="change-indicator negative"><span class="direction-symbol"></span><span>-82.4%</span></div></div></div></div><div class="_section_460el_1"><p class="_label_pcd46_23" data-cy="metric-subtitle-label">Reps with Statements</p><p class="_metricNumber_p3g6f_23 _totalReps_i8upk_23" data-cy="metric-number">34 </p></div></div><div class="_metricCard_1mvl1_23" data-cy="metric-card"><p class="_title_46oz0_23">Statement Overview</p><div class="_container_11ad9_23"><div class="_row_11ad9_28"><div class="_section_460el_1 _section_11ad9_33"><p class="_label_pcd46_23" data-cy="metric-subtitle-label">Total</p><p class="_metricNumber_p3g6f_23" data-cy="metric-number">42 </p></div><div class="_section_460el_1 _section_11ad9_33"><p class="_label_pcd46_23" data-cy="metric-subtitle-label">Need Attention</p><a title="Errored Statements" href="https://us1.spiff.com/errored_statements/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw=="><p class="_metricNumber_p3g6f_23 _needAttentionLink_11ad9_37" data-cy="metric-number">0 </p></a></div></div><div class="_row_11ad9_28"><div class="_section_460el_1 _section_11ad9_33"><p class="_label_pcd46_23" data-cy="metric-subtitle-label">Frozen</p><p class="_metricNumber_p3g6f_23 _frozenMetric_11ad9_42" data-cy="metric-number">42 </p></div></div></div></div><div class="_metricCard_1mvl1_23" data-cy="metric-card"><p class="_title_46oz0_23">Integration Health</p><div class="_container_uoleh_23"><div class="_content_uoleh_29"><div class="_connectorItem_uoleh_86"><div class="_connectorItemHeader_uoleh_86 _singleConnectorHeader_uoleh_95"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="_icon_aigk5_23 _large_aigk5_42" color="#222c31"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3222 6.5248C10.9674 5.85309 11.8655 5.43713 12.8576 5.43713C14.1805 5.43713 15.327 6.17204 15.9443 7.26707C16.4923 7.0221 17.0858 6.89563 17.686 6.89594C20.0672 6.89594 22 8.84346 22 11.2466C22 13.6498 20.0672 15.5973 17.686 15.5973C17.395 15.5973 17.1113 15.5681 16.8335 15.5128C16.2934 16.4756 15.2608 17.1296 14.085 17.1296C13.6062 17.1306 13.1336 17.022 12.7033 16.8122C12.1558 18.0983 10.8807 19.0022 9.39619 19.0022C7.84552 19.0022 6.53002 18.0248 6.02293 16.6505C5.79723 16.6981 5.56718 16.722 5.33652 16.7219C3.49188 16.7219 2 15.208 2 13.3486C2 12.0993 2.67171 11.0116 3.66826 10.4237C3.45684 9.93665 3.34802 9.41129 3.34857 8.88036C3.34857 6.7344 5.09032 5 7.23628 5C8.49298 5 9.6174 5.59896 10.3229 6.52862" fill="#00A1E0"></path></svg>Salesforce</div><span class="_dateMessage_uoleh_57 _singleConnectorDateMessage_uoleh_76"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="_icon_aigk5_23 _small_aigk5_34" color="#777d80"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.8069 7C16.4465 5.0787 14.3936 4 12 4C7.58172 4 4 7.58172 4 12H2C2 6.47715 6.47715 2 12 2C14.8042 2 17.2749 3.18251 19 5.27035V4H21V9H16.5V7H17.8069ZM6.19306 17C7.55354 18.9213 9.60638 20 12 20C16.4183 20 20 16.4183 20 12H22C22 17.5228 17.5228 22 12 22C9.19577 22 6.72511 20.8175 5 18.7297V20H3V15H7.5V17H6.19306ZM11.0001 15.4142L16.2072 10.2071L14.793 8.79291L11.0001 12.5858L9.20718 10.7929L7.79297 12.2071L11.0001 15.4142Z"></path></svg>14 Jan 2025 - 03:02 PM EST</span><div class="_statusContainer_uoleh_69"><span><div class="_label_1w0wb_23 _paused_1w0wb_44"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="_icon_aigk5_23 _small_aigk5_34" color="#51585c"><path fill-rule="evenodd" d="M12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 Z M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z M9,7 L11,7 L11,17 L9,17 L9,7 Z M13,7 L15,7 L15,17 L13,17 L13,7 Z"></path></svg><span>Paused</span></div></span></div></div></div></div></div></div></div><div class="layout-container"><div class="view table-view _tableView_lrd72_23" data-cy="view"><div><div class="action-bar" data-cy="table-action-bar"><p class="_title_lrd72_27">Commissions</p><div class="_actions_lrd72_34"><span class="_tip-trigger_1tx91_23 tip-trigger" data-cy="toolbar-search" data-for="toolbar-search" data-tip="true" currentitem="false"><div class="SearchInput-root-0-2-1 search-input _search_17sfg_23 _primary_17sfg_44 expanded SearchInput-light-0-2-8 SearchInput-medium-0-2-6 focus-within:outline-rounded border-radius-full SearchInput-square-0-2-14" data-expanded="true" data-searchinput="true"><input class="SearchInput-input-0-2-2" data-cy="search-input" id="search-input-1" placeholder="Search by rep or plan name" type="text"><label class="SearchInput-icon-0-2-3 search-button" data-cy="search-button" for="search-input-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="_icon_aigk5_23 _medium_aigk5_38" color="#222c31"><path fill-rule="evenodd" d="M16.3198574,14.9056439 L21.7071068,20.2928932 L20.2928932,21.7071068 L14.9056439,16.3198574 C13.5509601,17.3729184 11.8487115,18 10,18 C5.581722,18 2,14.418278 2,10 C2,5.581722 5.581722,2 10,2 C14.418278,2 18,5.581722 18,10 C18,11.8487115 17.3729184,13.5509601 16.3198574,14.9056439 Z M10,16 C13.3137085,16 16,13.3137085 16,10 C16,6.6862915 13.3137085,4 10,4 C6.6862915,4 4,6.6862915 4,10 C4,13.3137085 6.6862915,16 10,16 Z"></path></svg><span class="_visuallyHidden_183jt_1">Search</span></label></div></span><div class="_spacer_1imoy_1"></div><span class="_tip-trigger_1tx91_23 tip-trigger" data-cy="export" data-for="export" data-tip="true" currentitem="false"><button data-cy="icon-button" aria-label="Export all statements for this period" type="button" class="_button_la2j5_23 _iconButton_la2j5_37 _medium_la2j5_113 _spiffLight_la2j5_315 _neutral_la2j5_278 _secondary_la2j5_224"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="_icon_aigk5_23 _icon_la2j5_37 _medium_aigk5_38" color="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M22,16 L22,20 C22,21.1045695 21.1045695,22 20,22 L4,22 C2.8954305,22 2,21.1045695 2,20 L2,16 L4,16 L4,20 L20,20 L20,16 L22,16 Z M13,12.5857864 L16.2928932,9.29289322 L17.7071068,10.7071068 L12,16.4142136 L6.29289322,10.7071068 L7.70710678,9.29289322 L11,12.5857864 L11,2 L13,2 L13,12.5857864 Z"></path></svg></button><div class="__react_component_tooltip t84e2a160-2a42-45ae-bed5-b8c74078dbd3 place-top type-dark allow_hover" id="export" data-id="tooltip"><style>
+  	.t84e2a160-2a42-45ae-bed5-b8c74078dbd3 {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+  	}
+
+  	.t84e2a160-2a42-45ae-bed5-b8c74078dbd3.place-top {
+        margin-top: -10px;
+    }
+    .t84e2a160-2a42-45ae-bed5-b8c74078dbd3.place-top::before {
+        border-top: 8px solid transparent;
+    }
+    .t84e2a160-2a42-45ae-bed5-b8c74078dbd3.place-top::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-top-color: #222;
+        border-top-style: solid;
+        border-top-width: 6px;
+    }
+
+    .t84e2a160-2a42-45ae-bed5-b8c74078dbd3.place-bottom {
+        margin-top: 10px;
+    }
+    .t84e2a160-2a42-45ae-bed5-b8c74078dbd3.place-bottom::before {
+        border-bottom: 8px solid transparent;
+    }
+    .t84e2a160-2a42-45ae-bed5-b8c74078dbd3.place-bottom::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-bottom-color: #222;
+        border-bottom-style: solid;
+        border-bottom-width: 6px;
+    }
+
+    .t84e2a160-2a42-45ae-bed5-b8c74078dbd3.place-left {
+        margin-left: -10px;
+    }
+    .t84e2a160-2a42-45ae-bed5-b8c74078dbd3.place-left::before {
+        border-left: 8px solid transparent;
+    }
+    .t84e2a160-2a42-45ae-bed5-b8c74078dbd3.place-left::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-left-color: #222;
+        border-left-style: solid;
+        border-left-width: 6px;
+    }
+
+    .t84e2a160-2a42-45ae-bed5-b8c74078dbd3.place-right {
+        margin-left: 10px;
+    }
+    .t84e2a160-2a42-45ae-bed5-b8c74078dbd3.place-right::before {
+        border-right: 8px solid transparent;
+    }
+    .t84e2a160-2a42-45ae-bed5-b8c74078dbd3.place-right::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-right-color: #222;
+        border-right-style: solid;
+        border-right-width: 6px;
+    }
+  </style><span data-cy="export-content">Export all statements for this period</span></div></span><div class="_spacer_1imoy_1"></div><span data-state="closed" class="_tip_trigger_1n3oc_50" data-cy="tooltip-trigger"><div data-testid="freeze-slider"><div class="toggle-slider-container" data-cy="toggle-slider-container"><label class="toggle-slider checked autoSize" data-cy="toggle-slider" data-state="checked" style="height: 34px; border-radius: 34px;"><div class="toggle-slider-text" data-cy="toggle-slider-text" style="margin-right: 32px; margin-left: 0px;"><span aria-hidden="false" class="toggle-slider-text-checked">Un-Freeze</span><span aria-hidden="true" class="toggle-slider-text-unchecked">Freeze</span></div><div class="toggle-slider-handle checked" style="width: 32px; height: 32px; border-radius: 32px; margin-left: 0px; left: calc(100% - 33px);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="_icon_aigk5_23 _large_aigk5_42" color="#545cff"><path d="M11.0001 13.7321V17.5858L8.293 20.2929L9.70721 21.7071L11.0001 20.4142V23H13.0001V20.4142L14.293 21.7071L15.7072 20.2929L13.0001 17.5858V13.732L16.3377 15.6589L17.3285 19.3569L19.2604 18.8393L18.7872 17.0731L21.0265 18.366L22.0265 16.634L19.7871 15.3411L21.5533 14.8678L21.0356 12.936L17.3377 13.9269L14.0002 12L17.3376 10.0731L21.0356 11.064L21.5532 9.13215L19.7871 8.65892L22.0264 7.36602L21.0264 5.63397L18.7871 6.92687L19.2603 5.16074L17.3285 4.6431L16.3376 8.34108L13.0001 10.268V6.41421L15.7072 3.70711L14.293 2.29289L13.0001 3.58579V1H11.0001V3.58579L9.70721 2.29289L8.293 3.70711L11.0001 6.41421V10.2679L7.66279 8.34108L6.67192 4.64311L4.74007 5.16074L5.2133 6.92687L2.97395 5.63398L1.97395 7.36603L4.2133 8.65892L2.44718 9.13215L2.96482 11.064L6.66279 10.0731L10.0002 12L6.66272 13.9269L2.96475 12.936L2.44711 14.8678L4.21323 15.3411L1.97388 16.634L2.97388 18.366L5.21323 17.0731L4.74 18.8393L6.67185 19.3569L7.66272 15.6589L11.0001 13.7321Z"></path></svg></div><input class="toggle-slider-hidden-input" id="2" type="checkbox" checked=""></label></div></div></span></div></div><div class="_fullPage_19uqq_43"><div class="_table_1ovc4_38 _stretchy_1ovc4_51" role="table" id="roleManagement" data-cy="table-container" style="scroll-padding-bottom: 44px; scroll-padding-top: 44px;"><div class="_header_urxdi_23" style="height: 44px;"><div class="header-group _headerGroup_jgxxj_290" role="row" style="display: flex; flex: 1 0 auto; min-width: 490px; height: 1144px;"><div class="header-subgroup _subGroup_jgxxj_299 _row_jgxxj_117" data-cy="table-header-subgroup" style="height: 44px;"></div><div class="header-subgroup _subGroup_jgxxj_299 _row_jgxxj_117" data-cy="table-header-subgroup" style="height: 44px;"><div class="_headerCell_1sem0_290 _cell_1sem0_121 _indexCell_1sem0_296 _center_1sem0_337 _fixedSize_1sem0_393" data-column-hidden="false" data-column-id="index" data-column-index="0" data-cy="table-column-header" colspan="1" role="columnheader" draggable="true" style="box-sizing: border-box; min-width: 0px; width: 40px; position: relative; height: 44px; padding: 0px 16px;"><div class="_alignment_1sem0_300" data-cy="header-text" style="justify-content: center; text-align: center;"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">#</div></div><div class="_columnSnapshot_1h7t2_23 _hidden_1h7t2_30 _columnSnapshot_1sem0_376" style="height: 1100px;"></div></div><div class="_withText_k2v80_45 _headerCell_1sem0_290 _cell_1sem0_121 _left_1sem0_336" data-column-hidden="false" data-column-id="name" data-column-index="1" data-cy="table-column-header" colspan="1" role="columnheader" data-state="closed" aria-label="More options" draggable="true" style="box-sizing: border-box; flex: 250 0 auto; min-width: 180px; width: 250px; position: relative; height: 44px; padding: 0px 16px;"><div class="_alignment_1sem0_300" data-cy="header-text" style="justify-content: left; text-align: left;"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Representative</div><div class="_sortIcon_1sem0_349"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 24" class="_icon_aigk5_23 _medium_aigk5_38" color="#424b4f"><path fill-rule="evenodd" d="M6 20L2 15.4348L4.85714 15.4348L4.85714 5L7.14286 5L7.14286 15.4348L10 15.4348L6 20Z"></path></svg></div></div><div class="_columnSnapshot_1h7t2_23 _hidden_1h7t2_30 _columnSnapshot_1sem0_376" style="height: 1100px;"></div><button type="button" id="radix-3" aria-haspopup="menu" aria-expanded="false" data-state="closed" aria-label="More options" class="_trigger_k2v80_23 _withText_k2v80_45 _contextIcon_1sem0_312 _alwaysShowContextIcon_1sem0_331" data-cy="dropdown-trigger"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="_icon_aigk5_23 _small_aigk5_34" color="#a1a9ad"><path d="M11.6566 17.0017L6.27956 10.8581C5.64499 10.1353 6.16072 9 7.12379 9H17.8779C18.0934 8.99982 18.3044 9.06174 18.4857 9.17835C18.6669 9.29496 18.8107 9.46132 18.8998 9.6575C18.9888 9.85368 19.0195 10.0714 18.988 10.2845C18.9564 10.4976 18.8642 10.6972 18.7221 10.8592L13.3451 17.0006C13.2398 17.121 13.1101 17.2175 12.9644 17.2836C12.8188 17.3497 12.6608 17.3839 12.5008 17.3839C12.3409 17.3839 12.1828 17.3497 12.0372 17.2836C11.8916 17.2175 11.7618 17.121 11.6566 17.0006V17.0017Z"></path></svg></button></div><div class="_withText_k2v80_45 _headerCell_1sem0_290 _cell_1sem0_121 _right_1sem0_341" data-column-hidden="false" data-column-id="summedCommission" data-column-index="2" data-cy="table-column-header" colspan="1" role="columnheader" data-state="closed" aria-label="More options" draggable="true" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; position: relative; height: 44px; padding: 0px 16px;"><div class="_alignment_1sem0_300" data-cy="header-text" style="justify-content: right; text-align: right;"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Commission</div></div><div class="_columnSnapshot_1h7t2_23 _hidden_1h7t2_30 _columnSnapshot_1sem0_376" style="height: 1100px;"></div><button type="button" id="radix-4" aria-haspopup="menu" aria-expanded="false" data-state="closed" aria-label="More options" class="_trigger_k2v80_23 _withText_k2v80_45 _contextIcon_1sem0_312 _alwaysShowContextIcon_1sem0_331" data-cy="dropdown-trigger"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="_icon_aigk5_23 _small_aigk5_34" color="#a1a9ad"><path d="M11.6566 17.0017L6.27956 10.8581C5.64499 10.1353 6.16072 9 7.12379 9H17.8779C18.0934 8.99982 18.3044 9.06174 18.4857 9.17835C18.6669 9.29496 18.8107 9.46132 18.8998 9.6575C18.9888 9.85368 19.0195 10.0714 18.988 10.2845C18.9564 10.4976 18.8642 10.6972 18.7221 10.8592L13.3451 17.0006C13.2398 17.121 13.1101 17.2175 12.9644 17.2836C12.8188 17.3497 12.6608 17.3839 12.5008 17.3839C12.3409 17.3839 12.1828 17.3497 12.0372 17.2836C11.8916 17.2175 11.7618 17.121 11.6566 17.0006V17.0017Z"></path></svg></button></div><div class="_withText_k2v80_45 _headerCell_1sem0_290 _cell_1sem0_121 _right_1sem0_341" data-column-hidden="false" data-column-id="adjustment" data-column-index="3" data-cy="table-column-header" colspan="1" role="columnheader" data-state="closed" aria-label="More options" draggable="true" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; position: relative; height: 44px; padding: 0px 16px;"><div class="_alignment_1sem0_300" data-cy="header-text" style="justify-content: right; text-align: right;"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Adjustment</div></div><div class="_columnSnapshot_1h7t2_23 _hidden_1h7t2_30 _columnSnapshot_1sem0_376" style="height: 1100px;"></div><button type="button" id="radix-5" aria-haspopup="menu" aria-expanded="false" data-state="closed" aria-label="More options" class="_trigger_k2v80_23 _withText_k2v80_45 _contextIcon_1sem0_312 _alwaysShowContextIcon_1sem0_331" data-cy="dropdown-trigger"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="_icon_aigk5_23 _small_aigk5_34" color="#a1a9ad"><path d="M11.6566 17.0017L6.27956 10.8581C5.64499 10.1353 6.16072 9 7.12379 9H17.8779C18.0934 8.99982 18.3044 9.06174 18.4857 9.17835C18.6669 9.29496 18.8107 9.46132 18.8998 9.6575C18.9888 9.85368 19.0195 10.0714 18.988 10.2845C18.9564 10.4976 18.8642 10.6972 18.7221 10.8592L13.3451 17.0006C13.2398 17.121 13.1101 17.2175 12.9644 17.2836C12.8188 17.3497 12.6608 17.3839 12.5008 17.3839C12.3409 17.3839 12.1828 17.3497 12.0372 17.2836C11.8916 17.2175 11.7618 17.121 11.6566 17.0006V17.0017Z"></path></svg></button></div><div class="_withText_k2v80_45 _headerCell_1sem0_290 _cell_1sem0_121 _center_1sem0_337" data-column-hidden="false" data-column-id="allStatementsFrozen" data-column-index="4" data-cy="table-column-header" colspan="1" role="columnheader" data-state="closed" aria-label="More options" draggable="true" style="box-sizing: border-box; flex: 250 0 auto; min-width: 110px; width: 250px; position: relative; height: 44px; padding: 0px 16px;"><div class="_alignment_1sem0_300" data-cy="header-text" style="justify-content: center; text-align: center;"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Finance Status</div></div><div class="_columnSnapshot_1h7t2_23 _hidden_1h7t2_30 _columnSnapshot_1sem0_376" style="height: 1100px;"></div><button type="button" id="radix-6" aria-haspopup="menu" aria-expanded="false" data-state="closed" aria-label="More options" class="_trigger_k2v80_23 _withText_k2v80_45 _contextIcon_1sem0_312 _alwaysShowContextIcon_1sem0_331" data-cy="dropdown-trigger"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="_icon_aigk5_23 _small_aigk5_34" color="#a1a9ad"><path d="M11.6566 17.0017L6.27956 10.8581C5.64499 10.1353 6.16072 9 7.12379 9H17.8779C18.0934 8.99982 18.3044 9.06174 18.4857 9.17835C18.6669 9.29496 18.8107 9.46132 18.8998 9.6575C18.9888 9.85368 19.0195 10.0714 18.988 10.2845C18.9564 10.4976 18.8642 10.6972 18.7221 10.8592L13.3451 17.0006C13.2398 17.121 13.1101 17.2175 12.9644 17.2836C12.8188 17.3497 12.6608 17.3839 12.5008 17.3839C12.3409 17.3839 12.1828 17.3497 12.0372 17.2836C11.8916 17.2175 11.7618 17.121 11.6566 17.0006V17.0017Z"></path></svg></button></div></div></div></div><div class="table-body _body_11806_23" data-cy="table-body" role="rowgroup"><div class="_list_11806_28" style="height: 1100px; width: 100%; position: relative;"><div class="_row_d29aa_117 _row_d29aa_117" data-cy="table-row" role="row" style="display: flex; flex: 1 0 auto; min-width: 490px; position: absolute; left: 0px; width: 100%; height: 44px; top: 0px;"><div class="_cell_1qkc7_121 _indexCell_1qkc7_290 _fixedSize_1qkc7_363" data-cy="table-row-cell" data-index-cell-wrapper="true" role="cell" data-index="0-0" style="box-sizing: border-box; flex: 0 0 auto; min-width: 0px; width: 40px; height: 44px; padding: 0px 16px;"><div style="align-items: center; display: flex; flex-grow: 1; justify-content: center;">1</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="0-1" style="box-sizing: border-box; flex: 250 0 auto; min-width: 180px; width: 250px; height: 44px; padding: 0px 16px;"><div data-cy="table-row-cell-value" style="align-items: center; display: flex; flex-grow: 1; flex-wrap: wrap; justify-content: left; text-align: left; width: 100%;"><a class="_avatarLink_1knb8_5" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ5Mzc=/statements"><div class="_avatar_fe5p1_23 avatar _avatar_1knb8_1" data-cy="avatar" style="background-image: linear-gradient(rgb(249, 153, 67) 0%, rgb(249, 67, 67) 100%); height: 24px; width: 24px; min-width: 24px;"><div class="_borderSpacer_fe5p1_33" style="background: transparent; padding: 0px; height: 24px; width: 24px; min-width: 24px;"><div class="_content_fe5p1_40" data-cy="avatar-content" style="background-color: rgba(185, 128, 255, 0.8); background-image: url(&quot;https://us1.spiff.com/api/v1/files/VXNlckF2YXRhci0xMDgzMA==&quot;); font-size: 11px; height: 24px; width: 24px; min-width: 24px;"></div></div></div></a><span class="_linkContainer_17mws_310"><a class="_linkText_nsgr3_23" data-cy="user-name-link" rel="noopener noreferrer" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ5Mzc=/statements"><div class="_textContainer_17mws_311"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Andre Rivera</div></div></a></span></div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="0-2" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">CN¥0.00</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="0-3" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">--</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="0-4" style="box-sizing: border-box; flex: 250 0 auto; min-width: 110px; width: 250px; height: 44px; padding: 0px 16px;"><div class="_alignCenter_19uqq_31">Frozen</div></div></div><div class="_row_d29aa_117 _row_d29aa_117" data-cy="table-row" role="row" style="display: flex; flex: 1 0 auto; min-width: 490px; position: absolute; left: 0px; width: 100%; height: 44px; top: 44px;"><div class="_cell_1qkc7_121 _indexCell_1qkc7_290 _fixedSize_1qkc7_363" data-cy="table-row-cell" data-index-cell-wrapper="true" role="cell" data-index="1-0" style="box-sizing: border-box; flex: 0 0 auto; min-width: 0px; width: 40px; height: 44px; padding: 0px 16px;"><div style="align-items: center; display: flex; flex-grow: 1; justify-content: center;">2</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="1-1" style="box-sizing: border-box; flex: 250 0 auto; min-width: 180px; width: 250px; height: 44px; padding: 0px 16px;"><div data-cy="table-row-cell-value" style="align-items: center; display: flex; flex-grow: 1; flex-wrap: wrap; justify-content: left; text-align: left; width: 100%;"><a class="_avatarLink_1knb8_5" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjUxMzk=/statements"><div class="_avatar_fe5p1_23 avatar _avatar_1knb8_1" data-cy="avatar" style="background-image: linear-gradient(rgb(249, 153, 67) 0%, rgb(249, 67, 67) 100%); height: 24px; width: 24px; min-width: 24px;"><div class="_borderSpacer_fe5p1_33" style="background: transparent; padding: 0px; height: 24px; width: 24px; min-width: 24px;"><div class="_content_fe5p1_40" data-cy="avatar-content" style="background-color: rgba(255, 130, 104, 0.8); background-image: url(&quot;https://us1.spiff.com/api/v1/files/VXNlckF2YXRhci0xMDgyMg==&quot;); font-size: 11px; height: 24px; width: 24px; min-width: 24px;"></div></div></div></a><span class="_linkContainer_17mws_310"><a class="_linkText_nsgr3_23" data-cy="user-name-link" rel="noopener noreferrer" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjUxMzk=/statements"><div class="_textContainer_17mws_311"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Andrea E. Invoyse</div></div></a></span></div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="1-2" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">$0.00</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="1-3" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">--</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="1-4" style="box-sizing: border-box; flex: 250 0 auto; min-width: 110px; width: 250px; height: 44px; padding: 0px 16px;"><div class="_alignCenter_19uqq_31">Frozen</div></div></div><div class="_row_d29aa_117 _row_d29aa_117" data-cy="table-row" role="row" style="display: flex; flex: 1 0 auto; min-width: 490px; position: absolute; left: 0px; width: 100%; height: 44px; top: 88px;"><div class="_cell_1qkc7_121 _indexCell_1qkc7_290 _fixedSize_1qkc7_363" data-cy="table-row-cell" data-index-cell-wrapper="true" role="cell" data-index="2-0" style="box-sizing: border-box; flex: 0 0 auto; min-width: 0px; width: 40px; height: 44px; padding: 0px 16px;"><div style="align-items: center; display: flex; flex-grow: 1; justify-content: center;">3</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="2-1" style="box-sizing: border-box; flex: 250 0 auto; min-width: 180px; width: 250px; height: 44px; padding: 0px 16px;"><div data-cy="table-row-cell-value" style="align-items: center; display: flex; flex-grow: 1; flex-wrap: wrap; justify-content: left; text-align: left; width: 100%;"><a class="_avatarLink_1knb8_5" target="_self" href="statement.html"><div class="_avatar_fe5p1_23 avatar _avatar_1knb8_1" data-cy="avatar" style="background-image: linear-gradient(rgb(249, 153, 67) 0%, rgb(249, 67, 67) 100%); height: 24px; width: 24px; min-width: 24px;"><div class="_borderSpacer_fe5p1_33" style="background: transparent; padding: 0px; height: 24px; width: 24px; min-width: 24px;"><div class="_content_fe5p1_40" data-cy="avatar-content" style="background-color: rgba(255, 83, 149, 0.8); background-image: url(&quot;https://us1.spiff.com/api/v1/files/VXNlckF2YXRhci0zNTUxMA==&quot;); font-size: 11px; height: 24px; width: 24px; min-width: 24px;"></div></div></div></a><span class="_linkContainer_17mws_310"><a class="_linkText_nsgr3_23" data-cy="user-name-link" rel="noopener noreferrer" target="_self" href="statement.html"><div class="_textContainer_17mws_311"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Ava Saasna</div></div></a></span></div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="2-2" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">$5,172.62</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="2-3" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">--</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="2-4" style="box-sizing: border-box; flex: 250 0 auto; min-width: 110px; width: 250px; height: 44px; padding: 0px 16px;"><div class="_alignCenter_19uqq_31">Frozen</div></div></div><div class="_row_d29aa_117 _row_d29aa_117" data-cy="table-row" role="row" style="display: flex; flex: 1 0 auto; min-width: 490px; position: absolute; left: 0px; width: 100%; height: 44px; top: 132px;"><div class="_cell_1qkc7_121 _indexCell_1qkc7_290 _fixedSize_1qkc7_363" data-cy="table-row-cell" data-index-cell-wrapper="true" role="cell" data-index="3-0" style="box-sizing: border-box; flex: 0 0 auto; min-width: 0px; width: 40px; height: 44px; padding: 0px 16px;"><div style="align-items: center; display: flex; flex-grow: 1; justify-content: center;">4</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="3-1" style="box-sizing: border-box; flex: 250 0 auto; min-width: 180px; width: 250px; height: 44px; padding: 0px 16px;"><div data-cy="table-row-cell-value" style="align-items: center; display: flex; flex-grow: 1; flex-wrap: wrap; justify-content: left; text-align: left; width: 100%;"><a class="_avatarLink_1knb8_5" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ5NDQ=/statements"><div class="_avatar_fe5p1_23 avatar _avatar_1knb8_1" data-cy="avatar" style="background-image: linear-gradient(rgb(249, 153, 67) 0%, rgb(249, 67, 67) 100%); height: 24px; width: 24px; min-width: 24px;"><div class="_borderSpacer_fe5p1_33" style="background: transparent; padding: 0px; height: 24px; width: 24px; min-width: 24px;"><div class="_content_fe5p1_40" data-cy="avatar-content" style="background-color: rgba(255, 196, 92, 0.8); background-image: url(&quot;https://us1.spiff.com/api/v1/files/VXNlckF2YXRhci0xMDgwNQ==&quot;); font-size: 11px; height: 24px; width: 24px; min-width: 24px;"></div></div></div></a><span class="_linkContainer_17mws_310"><a class="_linkText_nsgr3_23" data-cy="user-name-link" rel="noopener noreferrer" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ5NDQ=/statements"><div class="_textContainer_17mws_311"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Bella D. Rankin</div></div></a></span></div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="3-2" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">$310.00</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="3-3" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">--</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="3-4" style="box-sizing: border-box; flex: 250 0 auto; min-width: 110px; width: 250px; height: 44px; padding: 0px 16px;"><div class="_alignCenter_19uqq_31">Frozen</div></div></div><div class="_row_d29aa_117 _row_d29aa_117" data-cy="table-row" role="row" style="display: flex; flex: 1 0 auto; min-width: 490px; position: absolute; left: 0px; width: 100%; height: 44px; top: 176px;"><div class="_cell_1qkc7_121 _indexCell_1qkc7_290 _fixedSize_1qkc7_363" data-cy="table-row-cell" data-index-cell-wrapper="true" role="cell" data-index="4-0" style="box-sizing: border-box; flex: 0 0 auto; min-width: 0px; width: 40px; height: 44px; padding: 0px 16px;"><div style="align-items: center; display: flex; flex-grow: 1; justify-content: center;">5</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="4-1" style="box-sizing: border-box; flex: 250 0 auto; min-width: 180px; width: 250px; height: 44px; padding: 0px 16px;"><div data-cy="table-row-cell-value" style="align-items: center; display: flex; flex-grow: 1; flex-wrap: wrap; justify-content: left; text-align: left; width: 100%;"><a class="_avatarLink_1knb8_5" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ4MjQ=/statements"><div class="_avatar_fe5p1_23 avatar _avatar_1knb8_1" data-cy="avatar" style="background-image: linear-gradient(rgb(249, 153, 67) 0%, rgb(249, 67, 67) 100%); height: 24px; width: 24px; min-width: 24px;"><div class="_borderSpacer_fe5p1_33" style="background: transparent; padding: 0px; height: 24px; width: 24px; min-width: 24px;"><div class="_content_fe5p1_40" data-cy="avatar-content" style="background-color: rgba(185, 128, 255, 0.8); background-image: url(&quot;https://us1.spiff.com/api/v1/files/VXNlckF2YXRhci0xMDgwNg==&quot;); font-size: 11px; height: 24px; width: 24px; min-width: 24px;"></div></div></div></a><span class="_linkContainer_17mws_310"><a class="_linkText_nsgr3_23" data-cy="user-name-link" rel="noopener noreferrer" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ4MjQ=/statements"><div class="_textContainer_17mws_311"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Brenda D. Ramirez</div></div></a></span></div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="4-2" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">$550.00</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="4-3" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">--</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="4-4" style="box-sizing: border-box; flex: 250 0 auto; min-width: 110px; width: 250px; height: 44px; padding: 0px 16px;"><div class="_alignCenter_19uqq_31">Frozen</div></div></div><div class="_row_d29aa_117 _row_d29aa_117" data-cy="table-row" role="row" style="display: flex; flex: 1 0 auto; min-width: 490px; position: absolute; left: 0px; width: 100%; height: 44px; top: 220px;"><div class="_cell_1qkc7_121 _indexCell_1qkc7_290 _fixedSize_1qkc7_363" data-cy="table-row-cell" data-index-cell-wrapper="true" role="cell" data-index="5-0" style="box-sizing: border-box; flex: 0 0 auto; min-width: 0px; width: 40px; height: 44px; padding: 0px 16px;"><div style="align-items: center; display: flex; flex-grow: 1; justify-content: center;">6</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="5-1" style="box-sizing: border-box; flex: 250 0 auto; min-width: 180px; width: 250px; height: 44px; padding: 0px 16px;"><div data-cy="table-row-cell-value" style="align-items: center; display: flex; flex-grow: 1; flex-wrap: wrap; justify-content: left; text-align: left; width: 100%;"><a class="_avatarLink_1knb8_5" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ5MjM=/statements"><div class="_avatar_fe5p1_23 avatar _avatar_1knb8_1" data-cy="avatar" style="background-image: linear-gradient(rgb(249, 153, 67) 0%, rgb(249, 67, 67) 100%); height: 24px; width: 24px; min-width: 24px;"><div class="_borderSpacer_fe5p1_33" style="background: transparent; padding: 0px; height: 24px; width: 24px; min-width: 24px;"><div class="_content_fe5p1_40" data-cy="avatar-content" style="background-color: rgba(255, 83, 149, 0.8); background-image: url(&quot;https://us1.spiff.com/api/v1/files/VXNlckF2YXRhci0xMDgyNA==&quot;); font-size: 11px; height: 24px; width: 24px; min-width: 24px;"></div></div></div></a><span class="_linkContainer_17mws_310"><a class="_linkText_nsgr3_23" data-cy="user-name-link" rel="noopener noreferrer" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ5MjM=/statements"><div class="_textContainer_17mws_311"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Byron D. Roberts</div></div></a></span></div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="5-2" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">$1,425.00</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="5-3" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">--</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="5-4" style="box-sizing: border-box; flex: 250 0 auto; min-width: 110px; width: 250px; height: 44px; padding: 0px 16px;"><div class="_alignCenter_19uqq_31">Frozen</div></div></div><div class="_row_d29aa_117 _row_d29aa_117" data-cy="table-row" role="row" style="display: flex; flex: 1 0 auto; min-width: 490px; position: absolute; left: 0px; width: 100%; height: 44px; top: 264px;"><div class="_cell_1qkc7_121 _indexCell_1qkc7_290 _fixedSize_1qkc7_363" data-cy="table-row-cell" data-index-cell-wrapper="true" role="cell" data-index="6-0" style="box-sizing: border-box; flex: 0 0 auto; min-width: 0px; width: 40px; height: 44px; padding: 0px 16px;"><div style="align-items: center; display: flex; flex-grow: 1; justify-content: center;">7</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="6-1" style="box-sizing: border-box; flex: 250 0 auto; min-width: 180px; width: 250px; height: 44px; padding: 0px 16px;"><div data-cy="table-row-cell-value" style="align-items: center; display: flex; flex-grow: 1; flex-wrap: wrap; justify-content: left; text-align: left; width: 100%;"><a class="_avatarLink_1knb8_5" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ5NTY=/statements"><div class="_avatar_fe5p1_23 avatar _avatar_1knb8_1" data-cy="avatar" style="background-image: linear-gradient(rgb(249, 153, 67) 0%, rgb(249, 67, 67) 100%); height: 24px; width: 24px; min-width: 24px;"><div class="_borderSpacer_fe5p1_33" style="background: transparent; padding: 0px; height: 24px; width: 24px; min-width: 24px;"><div class="_content_fe5p1_40" data-cy="avatar-content" style="background-color: rgba(63, 71, 233, 0.8); background-image: url(&quot;https://us1.spiff.com/api/v1/files/VXNlckF2YXRhci0xMDgzMw==&quot;); font-size: 11px; height: 24px; width: 24px; min-width: 24px;"></div></div></div></a><span class="_linkContainer_17mws_310"><a class="_linkText_nsgr3_23" data-cy="user-name-link" rel="noopener noreferrer" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ5NTY=/statements"><div class="_textContainer_17mws_311"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Carlos Guzman</div></div></a></span></div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="6-2" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">$2,658.53</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="6-3" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">--</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="6-4" style="box-sizing: border-box; flex: 250 0 auto; min-width: 110px; width: 250px; height: 44px; padding: 0px 16px;"><div class="_alignCenter_19uqq_31">Frozen</div></div></div><div class="_row_d29aa_117 _row_d29aa_117" data-cy="table-row" role="row" style="display: flex; flex: 1 0 auto; min-width: 490px; position: absolute; left: 0px; width: 100%; height: 44px; top: 308px;"><div class="_cell_1qkc7_121 _indexCell_1qkc7_290 _fixedSize_1qkc7_363" data-cy="table-row-cell" data-index-cell-wrapper="true" role="cell" data-index="7-0" style="box-sizing: border-box; flex: 0 0 auto; min-width: 0px; width: 40px; height: 44px; padding: 0px 16px;"><div style="align-items: center; display: flex; flex-grow: 1; justify-content: center;">8</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="7-1" style="box-sizing: border-box; flex: 250 0 auto; min-width: 180px; width: 250px; height: 44px; padding: 0px 16px;"><div data-cy="table-row-cell-value" style="align-items: center; display: flex; flex-grow: 1; flex-wrap: wrap; justify-content: left; text-align: left; width: 100%;"><a class="_avatarLink_1knb8_5" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ5Mjk=/statements"><div class="_avatar_fe5p1_23 avatar _avatar_1knb8_1" data-cy="avatar" style="background-image: linear-gradient(rgb(249, 153, 67) 0%, rgb(249, 67, 67) 100%); height: 24px; width: 24px; min-width: 24px;"><div class="_borderSpacer_fe5p1_33" style="background: transparent; padding: 0px; height: 24px; width: 24px; min-width: 24px;"><div class="_content_fe5p1_40" data-cy="avatar-content" style="background-color: rgba(185, 128, 255, 0.8); background-image: url(&quot;https://us1.spiff.com/api/v1/files/VXNlckF2YXRhci0xMDgyNQ==&quot;); font-size: 11px; height: 24px; width: 24px; min-width: 24px;"></div></div></div></a><span class="_linkContainer_17mws_310"><a class="_linkText_nsgr3_23" data-cy="user-name-link" rel="noopener noreferrer" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ5Mjk=/statements"><div class="_textContainer_17mws_311"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Carrie S. Matthews</div></div></a></span></div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="7-2" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">$0.00</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="7-3" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">--</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="7-4" style="box-sizing: border-box; flex: 250 0 auto; min-width: 110px; width: 250px; height: 44px; padding: 0px 16px;"><div class="_alignCenter_19uqq_31">Frozen</div></div></div><div class="_row_d29aa_117 _row_d29aa_117" data-cy="table-row" role="row" style="display: flex; flex: 1 0 auto; min-width: 490px; position: absolute; left: 0px; width: 100%; height: 44px; top: 352px;"><div class="_cell_1qkc7_121 _indexCell_1qkc7_290 _fixedSize_1qkc7_363" data-cy="table-row-cell" data-index-cell-wrapper="true" role="cell" data-index="8-0" style="box-sizing: border-box; flex: 0 0 auto; min-width: 0px; width: 40px; height: 44px; padding: 0px 16px;"><div style="align-items: center; display: flex; flex-grow: 1; justify-content: center;">9</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="8-1" style="box-sizing: border-box; flex: 250 0 auto; min-width: 180px; width: 250px; height: 44px; padding: 0px 16px;"><div data-cy="table-row-cell-value" style="align-items: center; display: flex; flex-grow: 1; flex-wrap: wrap; justify-content: left; text-align: left; width: 100%;"><a class="_avatarLink_1knb8_5" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ5MzA=/statements"><div class="_avatar_fe5p1_23 avatar _avatar_1knb8_1" data-cy="avatar" style="background-image: linear-gradient(rgb(249, 153, 67) 0%, rgb(249, 67, 67) 100%); height: 24px; width: 24px; min-width: 24px;"><div class="_borderSpacer_fe5p1_33" style="background: transparent; padding: 0px; height: 24px; width: 24px; min-width: 24px;"><div class="_content_fe5p1_40" data-cy="avatar-content" style="background-color: rgba(63, 71, 233, 0.8); background-image: url(&quot;https://us1.spiff.com/api/v1/files/VXNlckF2YXRhci0xMDgyNw==&quot;); font-size: 11px; height: 24px; width: 24px; min-width: 24px;"></div></div></div></a><span class="_linkContainer_17mws_310"><a class="_linkText_nsgr3_23" data-cy="user-name-link" rel="noopener noreferrer" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ5MzA=/statements"><div class="_textContainer_17mws_311"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Charles R. Olson</div></div></a></span></div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="8-2" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">$0.00</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="8-3" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">--</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="8-4" style="box-sizing: border-box; flex: 250 0 auto; min-width: 110px; width: 250px; height: 44px; padding: 0px 16px;"><div class="_alignCenter_19uqq_31">Frozen</div></div></div><div class="_row_d29aa_117 _row_d29aa_117" data-cy="table-row" role="row" style="display: flex; flex: 1 0 auto; min-width: 490px; position: absolute; left: 0px; width: 100%; height: 44px; top: 396px;"><div class="_cell_1qkc7_121 _indexCell_1qkc7_290 _fixedSize_1qkc7_363" data-cy="table-row-cell" data-index-cell-wrapper="true" role="cell" data-index="9-0" style="box-sizing: border-box; flex: 0 0 auto; min-width: 0px; width: 40px; height: 44px; padding: 0px 16px;"><div style="align-items: center; display: flex; flex-grow: 1; justify-content: center;">10</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="9-1" style="box-sizing: border-box; flex: 250 0 auto; min-width: 180px; width: 250px; height: 44px; padding: 0px 16px;"><div data-cy="table-row-cell-value" style="align-items: center; display: flex; flex-grow: 1; flex-wrap: wrap; justify-content: left; text-align: left; width: 100%;"><a class="_avatarLink_1knb8_5" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQwNzI=/statements"><div class="_avatar_fe5p1_23 avatar _avatar_1knb8_1" data-cy="avatar" style="background-image: linear-gradient(rgb(249, 153, 67) 0%, rgb(249, 67, 67) 100%); height: 24px; width: 24px; min-width: 24px;"><div class="_borderSpacer_fe5p1_33" style="background: transparent; padding: 0px; height: 24px; width: 24px; min-width: 24px;"><div class="_content_fe5p1_40" data-cy="avatar-content" style="background-color: rgba(255, 130, 104, 0.8); background-image: url(&quot;https://us1.spiff.com/api/v1/files/VXNlckF2YXRhci0xMDgyOA==&quot;); font-size: 11px; height: 24px; width: 24px; min-width: 24px;"></div></div></div></a><span class="_linkContainer_17mws_310"><a class="_linkText_nsgr3_23" data-cy="user-name-link" rel="noopener noreferrer" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQwNzI=/statements"><div class="_textContainer_17mws_311"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Charlotte S. Martin</div></div></a></span></div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="9-2" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">$0.00</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="9-3" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">--</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="9-4" style="box-sizing: border-box; flex: 250 0 auto; min-width: 110px; width: 250px; height: 44px; padding: 0px 16px;"><div class="_alignCenter_19uqq_31">Frozen</div></div></div><div class="_row_d29aa_117 _row_d29aa_117" data-cy="table-row" role="row" style="display: flex; flex: 1 0 auto; min-width: 490px; position: absolute; left: 0px; width: 100%; height: 44px; top: 440px;"><div class="_cell_1qkc7_121 _indexCell_1qkc7_290 _fixedSize_1qkc7_363" data-cy="table-row-cell" data-index-cell-wrapper="true" role="cell" data-index="10-0" style="box-sizing: border-box; flex: 0 0 auto; min-width: 0px; width: 40px; height: 44px; padding: 0px 16px;"><div style="align-items: center; display: flex; flex-grow: 1; justify-content: center;">11</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="10-1" style="box-sizing: border-box; flex: 250 0 auto; min-width: 180px; width: 250px; height: 44px; padding: 0px 16px;"><div data-cy="table-row-cell-value" style="align-items: center; display: flex; flex-grow: 1; flex-wrap: wrap; justify-content: left; text-align: left; width: 100%;"><a class="_avatarLink_1knb8_5" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ4NTE=/statements"><div class="_avatar_fe5p1_23 avatar _avatar_1knb8_1" data-cy="avatar" style="background-image: linear-gradient(rgb(249, 153, 67) 0%, rgb(249, 67, 67) 100%); height: 24px; width: 24px; min-width: 24px;"><div class="_borderSpacer_fe5p1_33" style="background: transparent; padding: 0px; height: 24px; width: 24px; min-width: 24px;"><div class="_content_fe5p1_40" data-cy="avatar-content" style="background-color: rgba(63, 71, 233, 0.8); background-image: url(&quot;https://us1.spiff.com/api/v1/files/VXNlckF2YXRhci0xMDgzMQ==&quot;); font-size: 11px; height: 24px; width: 24px; min-width: 24px;"></div></div></div></a><span class="_linkContainer_17mws_310"><a class="_linkText_nsgr3_23" data-cy="user-name-link" rel="noopener noreferrer" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ4NTE=/statements"><div class="_textContainer_17mws_311"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Chloe Garnier</div></div></a></span></div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="10-2" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">€0.00</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="10-3" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">--</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="10-4" style="box-sizing: border-box; flex: 250 0 auto; min-width: 110px; width: 250px; height: 44px; padding: 0px 16px;"><div class="_alignCenter_19uqq_31">Frozen</div></div></div><div class="_row_d29aa_117 _row_d29aa_117" data-cy="table-row" role="row" style="display: flex; flex: 1 0 auto; min-width: 490px; position: absolute; left: 0px; width: 100%; height: 44px; top: 484px;"><div class="_cell_1qkc7_121 _indexCell_1qkc7_290 _fixedSize_1qkc7_363" data-cy="table-row-cell" data-index-cell-wrapper="true" role="cell" data-index="11-0" style="box-sizing: border-box; flex: 0 0 auto; min-width: 0px; width: 40px; height: 44px; padding: 0px 16px;"><div style="align-items: center; display: flex; flex-grow: 1; justify-content: center;">12</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="11-1" style="box-sizing: border-box; flex: 250 0 auto; min-width: 180px; width: 250px; height: 44px; padding: 0px 16px;"><div data-cy="table-row-cell-value" style="align-items: center; display: flex; flex-grow: 1; flex-wrap: wrap; justify-content: left; text-align: left; width: 100%;"><a class="_avatarLink_1knb8_5" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjUxODc=/statements"><div class="_avatar_fe5p1_23 avatar _avatar_1knb8_1" data-cy="avatar" style="background-image: linear-gradient(rgb(249, 153, 67) 0%, rgb(249, 67, 67) 100%); height: 24px; width: 24px; min-width: 24px;"><div class="_borderSpacer_fe5p1_33" style="background: transparent; padding: 0px; height: 24px; width: 24px; min-width: 24px;"><div class="_content_fe5p1_40" data-cy="avatar-content" style="background-color: rgba(185, 128, 255, 0.8); background-image: url(&quot;https://us1.spiff.com/api/v1/files/VXNlckF2YXRhci0xMDgxMg==&quot;); font-size: 11px; height: 24px; width: 24px; min-width: 24px;"></div></div></div></a><span class="_linkContainer_17mws_310"><a class="_linkText_nsgr3_23" data-cy="user-name-link" rel="noopener noreferrer" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjUxODc=/statements"><div class="_textContainer_17mws_311"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Claudia Beltran</div></div></a></span></div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="11-2" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">$0.00</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="11-3" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">--</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="11-4" style="box-sizing: border-box; flex: 250 0 auto; min-width: 110px; width: 250px; height: 44px; padding: 0px 16px;"><div class="_alignCenter_19uqq_31">Frozen</div></div></div><div class="_row_d29aa_117 _row_d29aa_117" data-cy="table-row" role="row" style="display: flex; flex: 1 0 auto; min-width: 490px; position: absolute; left: 0px; width: 100%; height: 44px; top: 528px;"><div class="_cell_1qkc7_121 _indexCell_1qkc7_290 _fixedSize_1qkc7_363" data-cy="table-row-cell" data-index-cell-wrapper="true" role="cell" data-index="12-0" style="box-sizing: border-box; flex: 0 0 auto; min-width: 0px; width: 40px; height: 44px; padding: 0px 16px;"><div style="align-items: center; display: flex; flex-grow: 1; justify-content: center;">13</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="12-1" style="box-sizing: border-box; flex: 250 0 auto; min-width: 180px; width: 250px; height: 44px; padding: 0px 16px;"><div data-cy="table-row-cell-value" style="align-items: center; display: flex; flex-grow: 1; flex-wrap: wrap; justify-content: left; text-align: left; width: 100%;"><a class="_avatarLink_1knb8_5" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ5MzU=/statements"><div class="_avatar_fe5p1_23 avatar _avatar_1knb8_1" data-cy="avatar" style="background-image: linear-gradient(rgb(249, 153, 67) 0%, rgb(249, 67, 67) 100%); height: 24px; width: 24px; min-width: 24px;"><div class="_borderSpacer_fe5p1_33" style="background: transparent; padding: 0px; height: 24px; width: 24px; min-width: 24px;"><div class="_content_fe5p1_40" data-cy="avatar-content" style="background-color: rgba(0, 189, 164, 0.8); background-image: url(&quot;https://us1.spiff.com/api/v1/files/VXNlckF2YXRhci0xMDgxMw==&quot;); font-size: 11px; height: 24px; width: 24px; min-width: 24px;"></div></div></div></a><span class="_linkContainer_17mws_310"><a class="_linkText_nsgr3_23" data-cy="user-name-link" rel="noopener noreferrer" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ5MzU=/statements"><div class="_textContainer_17mws_311"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Connor S. Murphy</div></div></a></span></div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="12-2" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">€0.00</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="12-3" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">--</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="12-4" style="box-sizing: border-box; flex: 250 0 auto; min-width: 110px; width: 250px; height: 44px; padding: 0px 16px;"><div class="_alignCenter_19uqq_31">Frozen</div></div></div><div class="_row_d29aa_117 _row_d29aa_117" data-cy="table-row" role="row" style="display: flex; flex: 1 0 auto; min-width: 490px; position: absolute; left: 0px; width: 100%; height: 44px; top: 572px;"><div class="_cell_1qkc7_121 _indexCell_1qkc7_290 _fixedSize_1qkc7_363" data-cy="table-row-cell" data-index-cell-wrapper="true" role="cell" data-index="13-0" style="box-sizing: border-box; flex: 0 0 auto; min-width: 0px; width: 40px; height: 44px; padding: 0px 16px;"><div style="align-items: center; display: flex; flex-grow: 1; justify-content: center;">14</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="13-1" style="box-sizing: border-box; flex: 250 0 auto; min-width: 180px; width: 250px; height: 44px; padding: 0px 16px;"><div data-cy="table-row-cell-value" style="align-items: center; display: flex; flex-grow: 1; flex-wrap: wrap; justify-content: left; text-align: left; width: 100%;"><a class="_avatarLink_1knb8_5" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQwODI=/statements"><div class="_avatar_fe5p1_23 avatar _avatar_1knb8_1" data-cy="avatar" style="background-image: linear-gradient(rgb(249, 153, 67) 0%, rgb(249, 67, 67) 100%); height: 24px; width: 24px; min-width: 24px;"><div class="_borderSpacer_fe5p1_33" style="background: transparent; padding: 0px; height: 24px; width: 24px; min-width: 24px;"><div class="_content_fe5p1_40" data-cy="avatar-content" style="background-color: rgba(255, 196, 92, 0.8); background-image: url(&quot;https://us1.spiff.com/api/v1/files/VXNlckF2YXRhci0xMDgxNA==&quot;); font-size: 11px; height: 24px; width: 24px; min-width: 24px;"></div></div></div></a><span class="_linkContainer_17mws_310"><a class="_linkText_nsgr3_23" data-cy="user-name-link" rel="noopener noreferrer" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQwODI=/statements"><div class="_textContainer_17mws_311"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">David Bennett</div></div></a></span></div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="13-2" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">$0.00</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="13-3" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">--</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="13-4" style="box-sizing: border-box; flex: 250 0 auto; min-width: 110px; width: 250px; height: 44px; padding: 0px 16px;"><div class="_alignCenter_19uqq_31">Frozen</div></div></div><div class="_row_d29aa_117 _row_d29aa_117" data-cy="table-row" role="row" style="display: flex; flex: 1 0 auto; min-width: 490px; position: absolute; left: 0px; width: 100%; height: 44px; top: 616px;"><div class="_cell_1qkc7_121 _indexCell_1qkc7_290 _fixedSize_1qkc7_363" data-cy="table-row-cell" data-index-cell-wrapper="true" role="cell" data-index="14-0" style="box-sizing: border-box; flex: 0 0 auto; min-width: 0px; width: 40px; height: 44px; padding: 0px 16px;"><div style="align-items: center; display: flex; flex-grow: 1; justify-content: center;">15</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="14-1" style="box-sizing: border-box; flex: 250 0 auto; min-width: 180px; width: 250px; height: 44px; padding: 0px 16px;"><div data-cy="table-row-cell-value" style="align-items: center; display: flex; flex-grow: 1; flex-wrap: wrap; justify-content: left; text-align: left; width: 100%;"><a class="_avatarLink_1knb8_5" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ5NDI=/statements"><div class="_avatar_fe5p1_23 avatar _avatar_1knb8_1" data-cy="avatar" style="background-image: linear-gradient(rgb(249, 153, 67) 0%, rgb(249, 67, 67) 100%); height: 24px; width: 24px; min-width: 24px;"><div class="_borderSpacer_fe5p1_33" style="background: transparent; padding: 0px; height: 24px; width: 24px; min-width: 24px;"><div class="_content_fe5p1_40" data-cy="avatar-content" style="background-color: rgba(255, 83, 149, 0.8); background-image: url(&quot;https://us1.spiff.com/api/v1/files/VXNlckF2YXRhci0xMDgxNQ==&quot;); font-size: 11px; height: 24px; width: 24px; min-width: 24px;"></div></div></div></a><span class="_linkContainer_17mws_310"><a class="_linkText_nsgr3_23" data-cy="user-name-link" rel="noopener noreferrer" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQ5NDI=/statements"><div class="_textContainer_17mws_311"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Elise Tucker</div></div></a></span></div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="14-2" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">£0.00</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="14-3" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">--</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="14-4" style="box-sizing: border-box; flex: 250 0 auto; min-width: 110px; width: 250px; height: 44px; padding: 0px 16px;"><div class="_alignCenter_19uqq_31">Frozen</div></div></div><div class="_row_d29aa_117 _row_d29aa_117" data-cy="table-row" role="row" style="display: flex; flex: 1 0 auto; min-width: 490px; position: absolute; left: 0px; width: 100%; height: 44px; top: 660px;"><div class="_cell_1qkc7_121 _indexCell_1qkc7_290 _fixedSize_1qkc7_363" data-cy="table-row-cell" data-index-cell-wrapper="true" role="cell" data-index="15-0" style="box-sizing: border-box; flex: 0 0 auto; min-width: 0px; width: 40px; height: 44px; padding: 0px 16px;"><div style="align-items: center; display: flex; flex-grow: 1; justify-content: center;">16</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="15-1" style="box-sizing: border-box; flex: 250 0 auto; min-width: 180px; width: 250px; height: 44px; padding: 0px 16px;"><div data-cy="table-row-cell-value" style="align-items: center; display: flex; flex-grow: 1; flex-wrap: wrap; justify-content: left; text-align: left; width: 100%;"><a class="_avatarLink_1knb8_5" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjUxMTI=/statements"><div class="_avatar_fe5p1_23 avatar _avatar_1knb8_1" data-cy="avatar" style="background-image: linear-gradient(rgb(249, 153, 67) 0%, rgb(249, 67, 67) 100%); height: 24px; width: 24px; min-width: 24px;"><div class="_borderSpacer_fe5p1_33" style="background: transparent; padding: 0px; height: 24px; width: 24px; min-width: 24px;"><div class="_content_fe5p1_40" data-cy="avatar-content" style="background-color: rgba(255, 130, 104, 0.8); background-image: url(&quot;https://us1.spiff.com/api/v1/files/VXNlckF2YXRhci0xMDgxNg==&quot;); font-size: 11px; height: 24px; width: 24px; min-width: 24px;"></div></div></div></a><span class="_linkContainer_17mws_310"><a class="_linkText_nsgr3_23" data-cy="user-name-link" rel="noopener noreferrer" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjUxMTI=/statements"><div class="_textContainer_17mws_311"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Fiona Finance</div></div></a></span></div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="15-2" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">$4,098.15</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="15-3" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">--</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="15-4" style="box-sizing: border-box; flex: 250 0 auto; min-width: 110px; width: 250px; height: 44px; padding: 0px 16px;"><div class="_alignCenter_19uqq_31">Frozen</div></div></div><div class="_row_d29aa_117 _row_d29aa_117" data-cy="table-row" role="row" style="display: flex; flex: 1 0 auto; min-width: 490px; position: absolute; left: 0px; width: 100%; height: 44px; top: 704px;"><div class="_cell_1qkc7_121 _indexCell_1qkc7_290 _fixedSize_1qkc7_363" data-cy="table-row-cell" data-index-cell-wrapper="true" role="cell" data-index="16-0" style="box-sizing: border-box; flex: 0 0 auto; min-width: 0px; width: 40px; height: 44px; padding: 0px 16px;"><div style="align-items: center; display: flex; flex-grow: 1; justify-content: center;">17</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="16-1" style="box-sizing: border-box; flex: 250 0 auto; min-width: 180px; width: 250px; height: 44px; padding: 0px 16px;"><div data-cy="table-row-cell-value" style="align-items: center; display: flex; flex-grow: 1; flex-wrap: wrap; justify-content: left; text-align: left; width: 100%;"><a class="_avatarLink_1knb8_5" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQwODY=/statements"><div class="_avatar_fe5p1_23 avatar _avatar_1knb8_1" data-cy="avatar" style="background-image: linear-gradient(rgb(249, 153, 67) 0%, rgb(249, 67, 67) 100%); height: 24px; width: 24px; min-width: 24px;"><div class="_borderSpacer_fe5p1_33" style="background: transparent; padding: 0px; height: 24px; width: 24px; min-width: 24px;"><div class="_content_fe5p1_40" data-cy="avatar-content" style="background-color: rgba(0, 189, 164, 0.8); background-image: url(&quot;https://us1.spiff.com/api/v1/files/VXNlckF2YXRhci0xMDc5OA==&quot;); font-size: 11px; height: 24px; width: 24px; min-width: 24px;"></div></div></div></a><span class="_linkContainer_17mws_310"><a class="_linkText_nsgr3_23" data-cy="user-name-link" rel="noopener noreferrer" target="_self" href="https://us1.spiff.com/statement_periods/U3RhdGVtZW50UGVyaW9kLTIyODk0Nw==/users/VXNlci0xMDU2MjQwODY=/statements"><div class="_textContainer_17mws_311"><div class="_ellipsis-text_f80yk_1" data-cy="ellipsis-text" data-ellipsis-text="true">Freddie Bozeman</div></div></a></span></div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="16-2" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">CA$0.00</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="16-3" style="box-sizing: border-box; flex: 150 0 auto; min-width: 100px; width: 150px; height: 44px; padding: 0px 16px;"><div class="_alignRight_19uqq_37">--</div></div><div class="_cell_1qkc7_121" data-cy="table-row-cell" role="cell" data-index="16-4" style="box-sizing: border-box; flex: 250 0 auto; min-width: 110px; width: 250px; height: 44px; padding: 0px 16px;"><div class="_alignCenter_19uqq_31">Frozen</div></div></div><div class="_infiniteLoaderTrigger_11806_37" style="top: 880px;"></div></div></div><div class="_portal_1ovc4_61" data-portal="layer-1" style="width: 1601px;"></div><div class="_portal_1ovc4_61" data-portal="layer-2" style="width: 1601px;"><div class="_columnSnapshot_1h7t2_23 _stretchy_1h7t2_37" data-is-frozen="false" style="height: 1100px; left: 0px; min-width: 0px; width: 40px;"></div><div class="_columnSnapshot_1h7t2_23 _stretchy_1h7t2_37" data-is-frozen="false" style="height: 1100px; flex: 250 0 auto; left: 40px; min-width: 180px; width: 250px;"><div class="_resizer_k9xms_23" role="separator" draggable="false" style="cursor: col-resize;"></div></div><div class="_columnSnapshot_1h7t2_23 _stretchy_1h7t2_37" data-is-frozen="false" style="height: 1100px; flex: 150 0 auto; left: 290px; min-width: 100px; width: 150px;"><div class="_resizer_k9xms_23" role="separator" draggable="false" style="cursor: col-resize;"></div></div><div class="_columnSnapshot_1h7t2_23 _stretchy_1h7t2_37" data-is-frozen="false" style="height: 1100px; flex: 150 0 auto; left: 440px; min-width: 100px; width: 150px;"><div class="_resizer_k9xms_23" role="separator" draggable="false" style="cursor: col-resize;"></div></div><div class="_columnSnapshot_1h7t2_23 _stretchy_1h7t2_37" data-is-frozen="false" style="height: 1100px; flex: 250 0 auto; left: 590px; min-width: 110px; width: 250px;"><div class="_resizer_k9xms_23" role="separator" draggable="false" style="cursor: col-resize;"></div></div></div></div></div></div></div></div></div></div></div></div></div><button data-cy="customer-support-chat-button" aria-label="customer support chat" class="_button_la2j5_23 _iconButton_la2j5_37 _large_la2j5_145 _spiffLight_la2j5_315 _positive_la2j5_209 _primary_la2j5_213 _chatTrigger_1c9mc_1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="_icon_aigk5_23 _icon_la2j5_37 _medium_aigk5_38" color="currentColor" aria-hidden="true"><path d="M16.8594854,20.7417567 C15.3870177,21.5619833 13.7245582,22 12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 C17.5228475,2 22,6.4771525 22,12 C22,13.7245582 21.5619833,15.3870177 20.7417567,16.8594854 L21.0946904,21.0946904 L16.8594854,20.7417567 Z M16.3916038,18.6958341 L18.9053096,18.9053096 L18.6958341,16.3916038 L18.8621131,16.1149882 C19.6030308,14.8824253 20,13.4715357 20,12 C20,7.581722 16.418278,4 12,4 C7.581722,4 4,7.581722 4,12 C4,16.418278 7.581722,20 12,20 C13.4715357,20 14.8824253,19.6030308 16.1149882,18.8621131 L16.3916038,18.6958341 Z M12.0003283,16.9983464 C11.4478622,16.9983464 11,16.5506311 11,15.9983464 C11,15.4460616 11.4478622,14.9983464 12.0003283,14.9983464 C12.5527943,14.9983464 13.0006565,15.4460616 13.0006565,15.9983464 C13.0006565,16.5506311 12.5527943,16.9983464 12.0003283,16.9983464 Z M13,14 L11,14 L11,13 C11,12.2626932 11.3827392,11.7004784 11.9774877,11.2286498 C12.1564111,11.0867055 12.2101653,11.0510845 12.5339634,10.8458119 C12.8225361,10.6628706 13,10.3473166 13,10 C13,9.44771525 12.5522847,9 12,9 C11.4477153,9 11,9.44771525 11,10 L9,10 C9,8.34314575 10.3431458,7 12,7 C13.6568542,7 15,8.34314575 15,10 C15,11.0395627 14.4660508,11.988994 13.6048137,12.5349773 C13.3517279,12.6954217 13.3206582,12.7160104 13.2204897,12.7954765 C13.0562911,12.9257393 13,13.0084267 13,13 L13,14 Z"></path></svg></button><div class="Toastify"></div></div></div>
+    <div id="portal"><div class="__react_component_tooltip tce232cc6-213f-4b17-9ca8-5d75b2c9ec34 place-top type-dark allow_hover" id="designer-tip" data-id="tooltip"><style>
+  	.tce232cc6-213f-4b17-9ca8-5d75b2c9ec34 {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+  	}
+
+  	.tce232cc6-213f-4b17-9ca8-5d75b2c9ec34.place-top {
+        margin-top: -10px;
+    }
+    .tce232cc6-213f-4b17-9ca8-5d75b2c9ec34.place-top::before {
+        border-top: 8px solid transparent;
+    }
+    .tce232cc6-213f-4b17-9ca8-5d75b2c9ec34.place-top::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-top-color: #222;
+        border-top-style: solid;
+        border-top-width: 6px;
+    }
+
+    .tce232cc6-213f-4b17-9ca8-5d75b2c9ec34.place-bottom {
+        margin-top: 10px;
+    }
+    .tce232cc6-213f-4b17-9ca8-5d75b2c9ec34.place-bottom::before {
+        border-bottom: 8px solid transparent;
+    }
+    .tce232cc6-213f-4b17-9ca8-5d75b2c9ec34.place-bottom::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-bottom-color: #222;
+        border-bottom-style: solid;
+        border-bottom-width: 6px;
+    }
+
+    .tce232cc6-213f-4b17-9ca8-5d75b2c9ec34.place-left {
+        margin-left: -10px;
+    }
+    .tce232cc6-213f-4b17-9ca8-5d75b2c9ec34.place-left::before {
+        border-left: 8px solid transparent;
+    }
+    .tce232cc6-213f-4b17-9ca8-5d75b2c9ec34.place-left::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-left-color: #222;
+        border-left-style: solid;
+        border-left-width: 6px;
+    }
+
+    .tce232cc6-213f-4b17-9ca8-5d75b2c9ec34.place-right {
+        margin-left: 10px;
+    }
+    .tce232cc6-213f-4b17-9ca8-5d75b2c9ec34.place-right::before {
+        border-right: 8px solid transparent;
+    }
+    .tce232cc6-213f-4b17-9ca8-5d75b2c9ec34.place-right::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-right-color: #222;
+        border-right-style: solid;
+        border-right-width: 6px;
+    }
+  </style><span data-cy="designer-tip-content">Designer</span></div><div class="__react_component_tooltip tb83a56d1-64ea-4529-8eab-1ecebf8954b7 place-bottom type-dark allow_hover" id="toolbar-search" data-id="tooltip"><style>
+  	.tb83a56d1-64ea-4529-8eab-1ecebf8954b7 {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+  	}
+
+  	.tb83a56d1-64ea-4529-8eab-1ecebf8954b7.place-top {
+        margin-top: -10px;
+    }
+    .tb83a56d1-64ea-4529-8eab-1ecebf8954b7.place-top::before {
+        border-top: 8px solid transparent;
+    }
+    .tb83a56d1-64ea-4529-8eab-1ecebf8954b7.place-top::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-top-color: #222;
+        border-top-style: solid;
+        border-top-width: 6px;
+    }
+
+    .tb83a56d1-64ea-4529-8eab-1ecebf8954b7.place-bottom {
+        margin-top: 10px;
+    }
+    .tb83a56d1-64ea-4529-8eab-1ecebf8954b7.place-bottom::before {
+        border-bottom: 8px solid transparent;
+    }
+    .tb83a56d1-64ea-4529-8eab-1ecebf8954b7.place-bottom::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-bottom-color: #222;
+        border-bottom-style: solid;
+        border-bottom-width: 6px;
+    }
+
+    .tb83a56d1-64ea-4529-8eab-1ecebf8954b7.place-left {
+        margin-left: -10px;
+    }
+    .tb83a56d1-64ea-4529-8eab-1ecebf8954b7.place-left::before {
+        border-left: 8px solid transparent;
+    }
+    .tb83a56d1-64ea-4529-8eab-1ecebf8954b7.place-left::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-left-color: #222;
+        border-left-style: solid;
+        border-left-width: 6px;
+    }
+
+    .tb83a56d1-64ea-4529-8eab-1ecebf8954b7.place-right {
+        margin-left: 10px;
+    }
+    .tb83a56d1-64ea-4529-8eab-1ecebf8954b7.place-right::before {
+        border-right: 8px solid transparent;
+    }
+    .tb83a56d1-64ea-4529-8eab-1ecebf8954b7.place-right::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-right-color: #222;
+        border-right-style: solid;
+        border-right-width: 6px;
+    }
+  </style><span data-cy="toolbar-search-content">Search</span></div></div>
+
+    <script>
+      // Some node_modules depend on a `global` shim.
+      var global = global || window
+
+      // Handling poor connection issues
+      const errorMessage = document.getElementById("default-error-message")
+      const loadingMessage = document.getElementById("default-error-loading-message")
+      const refreshButton = document.getElementById("default-error-button")
+      refreshButton.addEventListener("click", () => {
+        window.location.reload()
+      })
+      setTimeout(() => {
+        loadingMessage.style.display = "none"
+        errorMessage.style.display = "flex"
+      }, 20000)
+    </script>
+
+  
+
+<form id="fileUploadForm" enctype="multipart/form-data" method="post" target="fileUploadIframe"><input type="file" id="fileSelector" name="file" style="display: none;"><input name="filename" type="hidden"></form><div class="embeddedServiceHelpButton"><div class="helpButton"><button class="helpButtonEnabled uiButton" href="javascript:void(0)"><span class="embeddedServiceIcon" aria-hidden="true" data-icon="" style="display: inline-block;"></span><span class="helpButtonLabel" id="helpButtonSpan" aria-live="polite" aria-atomic="true"><span class="assistiveText">Live chat:</span><span class="message"> </span></span></button></div></div>
+<script src="/_livereload.js"></script>
+</body></html>
